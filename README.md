@@ -2,9 +2,9 @@
 
 ## Downloads
 
-[Baixar projeto completo (ZIP)](https://github.com/3scud3r0/Markov-Procedural/releases/download/v0.2.0/MarkovJunior_Procedural.zip) · [Código consolidado (TXT)](https://github.com/3scud3r0/Markov-Procedural/releases/download/v0.2.0/codigo_procedural_completo.txt) · [Demonstração visual (PNG)](https://github.com/3scud3r0/Markov-Procedural/releases/download/v0.2.0/prova_procedural.png)
+[Baixar projeto completo (ZIP)](https://github.com/3scud3r0/Markov-Procedural/raw/refs/heads/main/downloads/MarkovJunior_Procedural.zip) · [Código consolidado (TXT)](https://github.com/3scud3r0/Markov-Procedural/raw/refs/heads/main/downloads/codigo_procedural_completo.txt) · [Demonstração visual (PNG)](https://github.com/3scud3r0/Markov-Procedural/raw/refs/heads/main/downloads/prova_procedural.png)
 
-Todos os arquivos estão na [release v0.2.0](https://github.com/3scud3r0/Markov-Procedural/releases/tag/v0.2.0), incluindo a wheel instalável e o relatório de validação.
+Todos os arquivos estão em [downloads/](https://github.com/3scud3r0/Markov-Procedural/tree/main/downloads), incluindo a wheel instalável e o relatório de validação.
 
 
 A versão Python evoluiu para uma base extensível que gera **programas em várias linguagens, linguagens próprias, textos, dados e cenas vetoriais**. Uma semente determina o conteúdo; um documento intermediário é exportado para os formatos escolhidos. O motor visual original e os 159 modelos continuam disponíveis.
