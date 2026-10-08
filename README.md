@@ -28,6 +28,12 @@ Salvar/reabrir projeto preserva código, parâmetros e edições. Há persistên
 
 ## Executar localmente
 
+### Núcleo reutilizável em um único arquivo
+
+[**Baixar procedural.py**](https://github.com/3scud3r0/Markov-Procedural/raw/refs/heads/main/procedural.py). O arquivo usa somente a biblioteca padrão do Python 3.10+: copie-o para seu projeto e use `from procedural import Procedural`. Também está incluído no pacote instalado e no runtime do Studio.
+
+Oferece fluxos aleatórios por semente/chave, escolha ponderada, ruído 1D–4D, fBm, gramáticas, reescrita de símbolos, restrições com tentativas, pipelines e exportação de arquivos. Você registra funções Python que retornam qualquer objeto. Inclui geradores de números, textos/código, terreno e grafos; novos domínios entram sem mudar o núcleo. Veja [PROCEDURAL_CORE.md](PROCEDURAL_CORE.md) para exemplos e o contrato de determinismo.
+
 Python 3.10+:
 
 ```bash
@@ -81,7 +87,7 @@ node validation/test_studio.cjs
 STUDIO_CPU=1 node validation/test_studio.cjs
 ```
 
-Os 31 testes Python e os testes de navegador verificam o contrato da linguagem. Os testes de navegador exigem Playwright e Chromium, e o Studio servido em `http://127.0.0.1:8765/` por padrão; `STUDIO_URL` permite testar outra URL. `STUDIO_CHROMIUM` seleciona o executável. Testam programas criados no editor, módulos, classes, controles, diagnósticos, callbacks, parada/recuperação, downloads, persistência e visualização com WebGL desativado.
+Os 46 testes Python e os testes de navegador verificam o contrato da linguagem. Os testes de navegador exigem Playwright e Chromium, e o Studio servido em `http://127.0.0.1:8765/` por padrão; `STUDIO_URL` permite testar outra URL. `STUDIO_CHROMIUM` seleciona o executável. Testam programas criados no editor, módulos, classes, controles, diagnósticos, callbacks, parada/recuperação, downloads, persistência e visualização com WebGL desativado.
 
 A validação anterior entre compiladores registra 2.673 resultados equivalentes nas nove linguagens em `validation/backend_report.json`. As evidências de paridade visual e RNG do porte estão preservadas; os módulos do motor original não foram alterados para implementar a linguagem.
 

@@ -115,9 +115,14 @@
       "sha256": "37f4d47911b9371907960bf7ad8d5f3bb2e517dda336fc5832278a8604719e18"
     },
     {
+      "path": "PROCEDURAL_CORE.md",
+      "bytes": 7575,
+      "sha256": "63dad83aca7bbd79323fa0a2dea8a3221807db6ea51679b0333d92e60566614a"
+    },
+    {
       "path": "README.md",
-      "bytes": 5996,
-      "sha256": "f8ea6af5ad6396ab66ab422fa958c7de734414d8d2a4823b421f614015cf0f88"
+      "bytes": 6801,
+      "sha256": "9bdb1e599b5433aaf360bfe68621cacea6e621f53216cd6e56c29ebfd9c790e2"
     },
     {
       "path": "ROADMAP.md",
@@ -281,8 +286,8 @@
     },
     {
       "path": "docs/python-runtime.zip",
-      "bytes": 696262,
-      "sha256": "17f9dead0b134cf234d7a66424a40a95b9d623d3d7e97573f639852c776e81ca"
+      "bytes": 704670,
+      "sha256": "17e98f8c3125dac3afcbf9f1fa9b1408800140fb5c27c3f0c2a740fda8addee4"
     },
     {
       "path": "docs/reference.html",
@@ -291,8 +296,8 @@
     },
     {
       "path": "docs/studio-worker.js",
-      "bytes": 1999,
-      "sha256": "15e6bb4245f0912ed328623863294316783ca5f00e5a64ee1b8e79600adfe6c3"
+      "bytes": 2047,
+      "sha256": "f8ee10c470da949613f171cf3b32f7e4a33fd7ef87adc33ba0a23231f0151890"
     },
     {
       "path": "docs/studio.css",
@@ -301,8 +306,8 @@
     },
     {
       "path": "docs/studio.js",
-      "bytes": 26215,
-      "sha256": "0e50ccf53ce3414db85976517a87df02c6e18a434afe0cbd4eaab04da19aac73"
+      "bytes": 26221,
+      "sha256": "37d8fda126a5145e482e493a2df811ce177d4faa6765ae17b00eefdba7ab771c"
     },
     {
       "path": "docs/style.css",
@@ -6045,6 +6050,11 @@
       "sha256": "92922221849eb8cac535f9f4190c4f98a3ebd4f9a4fffdfa4f4075e6916bce94"
     },
     {
+      "path": "procedural.py",
+      "bytes": 26094,
+      "sha256": "9eb916f92fcc8e89fbe971e214914ba5beec4504563726b4dc74c80d3029775b"
+    },
+    {
       "path": "prova_procedural.png",
       "bytes": 295609,
       "sha256": "ae1a7b111804f6c872771671b25b034e87c792300de6f0a0e46705cd1f26c128"
@@ -6056,8 +6066,8 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 706,
-      "sha256": "7e97205e74ee18b9eff19ac0329cabbeb6432507b36c528237add99ec12ea85b"
+      "bytes": 753,
+      "sha256": "e5625010d8b3f9c318127633fb141c611f8ef11959a66c47cc3fe6bd9ab75830"
     },
     {
       "path": "requirements-preview.txt",
@@ -7336,8 +7346,8 @@
     },
     {
       "path": "scripts/build_browser_runtime.py",
-      "bytes": 978,
-      "sha256": "c707528075e983ada91ba0ec3fbe312189acb3ef1da87e56c1e0703876c1bc3c"
+      "bytes": 1037,
+      "sha256": "715748ead659dcfc6311a48a80b42fe9566a423b8becda5c9646cb9d46ee4969"
     },
     {
       "path": "scripts/package_release.py",
@@ -7363,6 +7373,11 @@
       "path": "tests/test_procedural.py",
       "bytes": 7574,
       "sha256": "ac4b0ed82ef8d3ca7ef232ebaf4975fc89aa632f037d0e8b4225de0c83d99215"
+    },
+    {
+      "path": "tests/test_procedural_core.py",
+      "bytes": 9876,
+      "sha256": "01e5177ac78a98c61581b8d577649c3d70ee18fff43cc69c86d19e39ad25d97e"
     },
     {
       "path": "validation/backend_report.json",
@@ -10440,6 +10455,11 @@
       "sha256": "1363adcbc7c092ec8d91146cfa5e300de3f85c8e06a1cb1b46de4c01055e2f92"
     },
     {
+      "path": "validation/procedural_core_report.json",
+      "bytes": 540,
+      "sha256": "b094f937f4d6cac7b77168275b4948aee541f399f5b748bcd33f52856e2f4fce"
+    },
+    {
       "path": "validation/python/Apartemazements.json",
       "bytes": 71,
       "sha256": "3b78760a9107ee2ad1274b19acec6be10d26d8bdb166a5ffb8331ae30df0e3e9"
@@ -13503,6 +13523,11 @@
       "path": "validation/studio_report.json",
       "bytes": 2585,
       "sha256": "699cb73f5890208dd1cc40108742a2093e88d8bb1a7a3f1386b0ab732e431ddc"
+    },
+    {
+      "path": "validation/test_procedural_core_browser.cjs",
+      "bytes": 2360,
+      "sha256": "980a3a7c09b0a3b83a6e757174837fbfc83f184e4a0c96c52c30bd3b587aa1ab"
     },
     {
       "path": "validation/test_rng.py",

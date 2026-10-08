@@ -18,6 +18,9 @@ preview = ["CairoSVG>=2.7,<3"]
 [project.scripts]
 markovjunior = "markovjunior.cli:main"
 
+[tool.setuptools]
+py-modules = ["procedural"]
+
 [tool.setuptools.packages.find]
 include = ["markovjunior", "markovjunior.procedural"]
 

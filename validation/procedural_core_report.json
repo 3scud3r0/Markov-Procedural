@@ -1,0 +1,17 @@
+{
+  "schema": "markov.procedural-core.validation/1",
+  "core_version": "1.0.0",
+  "source": "procedural.py",
+  "sha256": "9eb916f92fcc8e89fbe971e214914ba5beec4504563726b4dc74c80d3029775b",
+  "standalone_no_dependencies": true,
+  "python_core_tests": 15,
+  "python_total_tests": 46,
+  "wheel_import_clean_install": "passed",
+  "local_browser": {
+    "pyodide_import": "passed",
+    "custom_generator_and_scene": "passed",
+    "grammar_terrain_rewriting": "passed",
+    "repeatable_exports": "passed",
+    "cpu_without_webgl": "passed"
+  }
+}

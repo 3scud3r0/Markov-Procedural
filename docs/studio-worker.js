@@ -6,9 +6,9 @@ const ready=(async()=>{
  pyodide=await loadPyodide({indexURL:'https://cdn.jsdelivr.net/pyodide/v0.27.7/full/'});
  postMessage({type:'status',message:'Preparando a linguagem Markov…',progress:65});
  await pyodide.loadPackage('pillow');
- const response=await fetch('python-runtime.zip?v=1.0.0');if(!response.ok)throw Error('Motor Python indisponível: '+response.status);
+ const response=await fetch('python-runtime.zip?v=1.0.0-core1');if(!response.ok)throw Error('Motor Python indisponível: '+response.status);
  pyodide.unpackArchive(await response.arrayBuffer(),'zip',{extractDir:'/home/pyodide'});
- await pyodide.runPythonAsync('import json\nfrom markovjunior.language import Session\nmarkov_session = Session()');
+ await pyodide.runPythonAsync('import json, sys\nsys.path.insert(0, "/home/pyodide")\nfrom markovjunior.language import Session\nmarkov_session = Session()');
  postMessage({type:'ready',version:'1.0.0'});
 })();
 ready.catch(error=>postMessage({type:'fatal',message:String(error)}));
