@@ -8,6 +8,7 @@ Não existia uma especificação para 0.5 a 1.0 na entrega 0.2.0. Este documento
 - Playground estático com Python real via Pyodide em Web Worker e cenas editáveis no Babylon.js.
 - Gerador de jardim 3D, controle de semente, seleção, movimento, rotação, escala e remoção de objetos.
 - Exportação/importação das edições em JSON; exportação individual dos códigos e SVGs gerados.
+- Renderização alternativa Canvas 2D na CPU, com projeção da cena 3D e edição sem WebGL; visual simplificado em relação ao Babylon.js.
 - Compiladores C/C++/Rust não são executados no playground. O Python gera os fontes.
 
 ## 0.5 — Representação de cenas e editor

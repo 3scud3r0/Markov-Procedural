@@ -1,0 +1,28 @@
+{
+  "schema": "markovjunior.browser-validation/1",
+  "python_tests": 15,
+  "runtime": "Pyodide 0.27.7",
+  "babylon": "9.30.0",
+  "browser": "Chromium",
+  "webgl_tests": {
+    "program_artifacts_equal_to_cpython": 10,
+    "scene_objects": 207,
+    "edit_position": "pass",
+    "delete_object": "pass",
+    "export_import_round_trip": "pass",
+    "rotation_and_scale_controls": "pass"
+  },
+  "cpu_tests": {
+    "webgl_disabled": true,
+    "babylon_script_blocked": true,
+    "scene_objects": 207,
+    "canvas_pointer_editing": "pass",
+    "program_artifacts_equal_to_cpython": 10,
+    "delete_object": "pass",
+    "export_import_round_trip": "pass",
+    "rotation_and_scale_controls": "pass",
+    "legacy_maze_svg": "pass",
+    "renderer_switch": "pass"
+  },
+  "scope": "Browser generation and editing; native target compilers are validated separately. CPU rendering uses simplified shading."
+}

@@ -5,6 +5,7 @@
   <title>Markov Procedural · Python + Babylon.js</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="vendor/babylon.js"></script>
+  <script defer src="fallback.js"></script>
   <script defer src="app.js"></script>
 </head>
 <body>
@@ -20,7 +21,7 @@
     <p class="hint">O primeiro carregamento baixa o Python e seus pacotes. A geração roda neste navegador, sem servidor Python.</p>
   </aside>
   <section class="workspace">
-    <div class="toolbar"><div class="tabs"><button id="tab-scene" class="active">Cena 3D</button><button id="tab-files">Arquivos gerados</button></div><span id="stats">Babylon.js · WebGL</span></div>
+    <div class="toolbar"><div class="tabs"><button id="tab-scene" class="active">Cena 3D</button><button id="tab-files">Arquivos gerados</button></div><select id="renderer" aria-label="Renderizador"><option value="auto">Automático · WebGL / Canvas</option><option value="canvas">Canvas 2D · sem WebGL</option></select><span id="stats">Preparando cena</span></div>
     <div id="scene-panel"><canvas id="render" aria-label="Cena 3D interativa"></canvas><div class="canvas-note">Arraste para orbitar · roda para zoom · clique para selecionar</div><div class="scene-actions"><select id="transform" aria-label="Transformação"><option value="move">Mover</option><option value="rotate">Girar</option><option value="scale">Escalar</option><option value="none">Sem gizmo</option></select><button id="reset-camera">Câmera inicial</button><button id="delete-object">Excluir seleção</button><button id="export-scene">Exportar edição JSON</button><label class="file-button">Importar edição<input type="file" id="import-scene" accept=".json,application/json"></label></div></div>
     <div id="files-panel" hidden><div class="file-toolbar"><select id="file-list" aria-label="Arquivo gerado"></select><button id="download-file">Baixar arquivo</button></div><pre id="source"></pre><iframe id="svg-preview" title="Prévia SVG" sandbox hidden></iframe></div>
   </section>

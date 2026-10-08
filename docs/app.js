@@ -1,7 +1,7 @@
 'use strict';
 const $=id=>document.getElementById(id);
 const status=message=>{$('status').textContent=message;};
-let engine,scene,camera,gizmos,files=[],meshes=[],selected=null,busy=true;
+let engine,scene,camera,gizmos,fallback,files=[],meshes=[],selected=null,busy=true;
 const presets={
  garden:()=>({version:1,seed:Number($('seed').value),jobs:[{name:'jardim',generator:'scene3d',params:{trees:Number($('trees').value),depth:Number($('depth').value)},targets:['scene3d-json']},{name:'funcoes',generator:'program',params:{functions:4},targets:['python','javascript','typescript','c','cpp','rust','go','lua','sql','json']}]}),
  maze:()=>({version:1,seed:Number($('seed').value),jobs:[{name:'labirinto',generator:'grid',params:{model:'MazeGrowth',width:31,height:31,cell:14},targets:['svg','json']}]}),
@@ -15,9 +15,9 @@ function download(name,content,type='application/json'){
 }
 function tab(name){$('scene-panel').hidden=name!=='scene';$('files-panel').hidden=name!=='files';$('tab-scene').classList.toggle('active',name==='scene');$('tab-files').classList.toggle('active',name==='files');engine?.resize();}
 function material(color){const mat=new BABYLON.StandardMaterial('color',scene);mat.diffuseColor=BABYLON.Color3.FromHexString(color);mat.specularColor=new BABYLON.Color3(.08,.08,.08);return mat;}
-function select(mesh){selected=mesh;gizmos.attachToMesh(mesh);}
-function transform(){gizmos.positionGizmoEnabled=$('transform').value==='move';gizmos.rotationGizmoEnabled=$('transform').value==='rotate';gizmos.scaleGizmoEnabled=$('transform').value==='scale';}
-function resetCamera(){camera.setTarget(new BABYLON.Vector3(0,2.5,0));camera.alpha=-Math.PI/2.3;camera.beta=1.12;camera.radius=24;}
+function select(mesh){selected=mesh;gizmos?.attachToMesh(mesh);}
+function transform(){if(fallback){fallback.mode=$('transform').value;fallback.draw();return;}if(!gizmos)return;gizmos.positionGizmoEnabled=$('transform').value==='move';gizmos.rotationGizmoEnabled=$('transform').value==='rotate';gizmos.scaleGizmoEnabled=$('transform').value==='scale';}
+function resetCamera(){if(fallback){fallback.reset();return;}if(!camera)return;camera.setTarget(new BABYLON.Vector3(0,2.5,0));camera.alpha=-Math.PI/2.3;camera.beta=1.12;camera.radius=24;}
 function initBabylon(){
  if(!window.BABYLON)throw Error('Babylon.js não carregou. Recarregue a página.');
  engine=new BABYLON.Engine($('render'),true,{preserveDrawingBuffer:true});scene=new BABYLON.Scene(engine);scene.clearColor=new BABYLON.Color4(.05,.08,.13,1);
@@ -26,10 +26,9 @@ function initBabylon(){
  const ground=BABYLON.MeshBuilder.CreateGround('ground',{width:30,height:30},scene);ground.material=material('#244437');ground.isPickable=false;
  gizmos=new BABYLON.GizmoManager(scene);gizmos.usePointerToAttachGizmos=false;transform();
  scene.onPointerObservable.add(event=>{if(event.type===BABYLON.PointerEventTypes.POINTERPICK){const mesh=event.pickInfo?.pickedMesh;select(mesh?.metadata?.editable?mesh:null);}});
- engine.runRenderLoop(()=>scene.render());window.addEventListener('resize',()=>engine.resize());
+ engine.runRenderLoop(()=>scene.render());window.addEventListener('resize',()=>engine?.resize());
 }
 function renderScene(data){
- if(!scene)throw Error('Seu navegador não conseguiu iniciar WebGL. Os arquivos Python continuam disponíveis.');
  if(data.schema!=='markovjunior.scene3d/1'||!Array.isArray(data.objects)||data.objects.length>3000)throw Error('Cena 3D inválida ou acima do limite de 3.000 objetos.');
  // Validate imported data before replacing the visible scene.
  for(const obj of data.objects){
@@ -40,6 +39,8 @@ function renderScene(data){
   else throw Error('Tipo de objeto desconhecido.');
   if(obj.transform){for(const field of ['position','rotation','scaling'])if(!vector(obj.transform[field]))throw Error('Transformação inválida.');}
  }
+ if(fallback){fallback.load(data);tab('scene');return;}
+ if(!scene)throw Error('Renderizador indisponível. Os arquivos gerados continuam acessíveis.');
  select(null);for(const mesh of meshes)mesh.dispose(false,true);meshes=[];
  const materials=new Map();
  for(const obj of data.objects){
@@ -68,7 +69,16 @@ function showResult(result){
  status('Pronto · '+result.manifest.jobs.length+' tarefas · '+result.files.length+' arquivos · semente '+result.manifest.seed+'.');
 }
 updateRecipe();
-let webglError=null;try{initBabylon();}catch(error){webglError=String(error);status(webglError);}
+let webglError=null;
+function initRenderer(){
+ if(fallback){fallback.dispose();fallback=null;}if(engine){engine.dispose();engine=null;}scene=null;camera=null;gizmos=null;selected=null;meshes=[];
+ // A canvas that acquired WebGL cannot acquire a 2D context. Use a fresh element.
+ const old=$('render'),fresh=old.cloneNode(false);old.replaceWith(fresh);
+ if($('renderer').value!=='canvas')try{initBabylon();return;}catch(error){webglError=String(error);engine?.dispose();engine=null;scene=null;camera=null;gizmos=null;const old=$('render');old.replaceWith(old.cloneNode(false));}
+ fallback=new CanvasSceneEngine($('render'),count=>{$('stats').textContent=count+' objetos · Canvas 2D / CPU';});
+ transform();$('stats').textContent='Canvas 2D / CPU · sem WebGL';
+}
+initRenderer();
 const worker=new Worker('worker.js');
 worker.onmessage=({data})=>{
  if(data.type==='status')status(data.message);
@@ -81,10 +91,11 @@ function run(edited){if(busy)return;try{if(!edited)updateRecipe();const recipe=J
 $('generate').onclick=()=>run(false);$('run-recipe').onclick=()=>run(true);$('preset').onchange=updateRecipe;
 for(const id of ['seed','trees','depth'])$(id).onchange=updateRecipe;
 $('tab-scene').onclick=()=>tab('scene');$('tab-files').onclick=()=>tab('files');$('transform').onchange=transform;$('reset-camera').onclick=resetCamera;
-$('delete-object').onclick=()=>{if(!selected)return;const mesh=selected;select(null);meshes=meshes.filter(m=>m!==mesh);mesh.dispose();$('stats').textContent=meshes.length+' objetos';};
+$('delete-object').onclick=()=>{if(fallback){fallback.remove();return;}if(!selected)return;const mesh=selected;select(null);meshes=meshes.filter(m=>m!==mesh);mesh.dispose();$('stats').textContent=meshes.length+' objetos';};
 $('file-list').onchange=showFile;$('download-file').onclick=()=>{const file=files[Number($('file-list').value)];if(file)download(file.name,file.content,file.media_type);};
-$('export-scene').onclick=()=>{
+function editedScene(){if(fallback)return fallback.export();
  const objects=meshes.map(mesh=>({...mesh.metadata.original,transform:{position:mesh.position.asArray(),rotation:(mesh.rotationQuaternion?mesh.rotationQuaternion.toEulerAngles():mesh.rotation).asArray(),scaling:mesh.scaling.asArray()}}));
- download('cena-editada.json',JSON.stringify({schema:'markovjunior.scene3d/1',objects},null,2));
-};
+ return{schema:'markovjunior.scene3d/1',objects};}
+$('export-scene').onclick=()=>download('cena-editada.json',JSON.stringify(editedScene(),null,2));
+$('renderer').onchange=()=>{const saved=editedScene();initRenderer();renderScene(saved);};
 $('import-scene').onchange=async event=>{try{const file=event.target.files[0];if(!file)return;if(file.size>4_000_000)throw Error('Arquivo maior que 4 MB.');renderScene(JSON.parse(await file.text()));status('Edição importada.');}catch(error){status('Erro de importação: '+error.message);}finally{event.target.value='';}};

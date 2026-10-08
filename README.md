@@ -13,7 +13,9 @@ A versão Python evoluiu para uma base extensível que gera **programas em vári
 
 ### Playground no navegador
 
-A interface [Babylon.js + Pyodide](https://3scud3r0.github.io/Markov-Procedural/) fica em `docs/`. O Python real roda em um Web Worker: gera jardim 3D, SVG, gramáticas e os nove formatos de código. Selecione objetos para mover, girar, escalar ou excluir; exporte/importa as edições em JSON. O modo de arquivos permite baixar o conteúdo gerado. Não executa compiladores C/C++/Rust.
+A interface [Babylon.js + Pyodide](https://3scud3r0.github.io/Markov-Procedural/) fica em `docs/`. O Python real roda em um Web Worker: gera jardim 3D, SVG, gramáticas e os nove formatos de código. Selecione objetos para mover, girar, escalar ou excluir; exporte/importe as edições em JSON. O modo de arquivos permite baixar o conteúdo gerado. Não executa compiladores C/C++/Rust.
+
+**Sem WebGL:** a página usa automaticamente um renderizador Canvas 2D na CPU, com projeção da mesma cena 3D. Também pode escolher **Canvas 2D · sem WebGL** no seletor. Orbite arrastando o fundo (ou com o botão direito), use a roda para zoom e arraste objetos selecionados para mover, girar ou escalar. Exportação/importação de edições funciona nos dois modos. O modo CPU usa formas e cores simplificadas, sem os efeitos de iluminação do Babylon.js.
 
 Para testar localmente, execute `python -m http.server 8000 --directory docs` e abra `http://localhost:8000`. O primeiro carregamento usa internet para baixar Pyodide 0.27.7 e Pillow; Babylon.js 9.30.0 está incluído localmente. Depois de alterar os fontes Python, execute `python scripts/build_browser_runtime.py`.
 
