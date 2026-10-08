@@ -2,7 +2,7 @@
   "schema": "markov.procedural-core.validation/1",
   "core_version": "1.0.0",
   "source": "procedural.py",
-  "sha256": "9eb916f92fcc8e89fbe971e214914ba5beec4504563726b4dc74c80d3029775b",
+  "sha256": "252a9b5253ef62277d2bb02a3a3345ae84bee178e6439e657fd08cbdc6513b3a",
   "standalone_no_dependencies": true,
   "python_core_tests": 15,
   "python_total_tests": 46,
@@ -13,5 +13,7 @@
     "grammar_terrain_rewriting": "passed",
     "repeatable_exports": "passed",
     "cpu_without_webgl": "passed"
-  }
+  },
+  "default_terrain_within_studio_budget": "passed",
+  "noise_cache_preserves_previous_demo_outputs": "passed"
 }

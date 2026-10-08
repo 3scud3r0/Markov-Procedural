@@ -35,7 +35,7 @@ function showResult(result,isFrame=false){lastResult=result;if(result.stdout.len
 }
 function bootWorker(autoRun=false){
  worker?.terminate();workerReady=false;booting=true;busy(false);$('run').disabled=true;$('runtime-dot').className='status-dot busy';$('runtime-label').textContent='Carregando runtime';$('runtime-progress').className='';status('Carregando Python no navegador…','busy');
- const current=new Worker('studio-worker.js?v=1.0.0-core1');worker=current;
+ const current=new Worker('studio-worker.js?v=1.0.0-core2');worker=current;
  const startup=setTimeout(()=>{if(worker===current&&!workerReady){log('O runtime está demorando para carregar. Verifique sua conexão e use Executar para tentar novamente.','error');$('run').disabled=false;$('run').querySelector('span').textContent='Tentar novamente';booting=false;}},120000);
  current.onmessage=({data})=>{if(worker!==current)return;
   if(data.type==='status'){$('runtime-detail').textContent=data.message;status(data.message,'busy');}

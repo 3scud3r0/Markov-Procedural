@@ -107,6 +107,15 @@ class ProceduralCoreTests(unittest.TestCase):
         a = engine.generate('terrain', width=3, height=4, origin=(0, 0))
         b = engine.generate('terrain', width=3, height=4, origin=(2, 0))
         self.assertEqual([row[2] for row in a['values']], [row[0] for row in b['values']])
+        from markovjunior.language import Session
+        session = Session()
+        try:
+            result = session.execute({'schema': 'markov.project/1', 'entry': 'main.mp', 'files': [
+                {'name': 'main.mp', 'content': 'from procedural import Procedural\nterrain=Procedural(42).generate("terrain")\nprint(terrain["width"],terrain["height"])'}]})
+            self.assertTrue(result['ok'], result['error'])
+            self.assertEqual(result['stdout'], '32 32\n')
+        finally:
+            session.close()
 
     def test_grammar_supports_weights_literal_braces_and_recursive_termination(self):
         ctx = Procedural(42).context

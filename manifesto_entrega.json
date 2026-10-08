@@ -286,8 +286,8 @@
     },
     {
       "path": "docs/python-runtime.zip",
-      "bytes": 704670,
-      "sha256": "17e98f8c3125dac3afcbf9f1fa9b1408800140fb5c27c3f0c2a740fda8addee4"
+      "bytes": 704868,
+      "sha256": "d331d8a0c33bc0167d17ffcf28270bd698f41a4521298954da3bf68cf1b54cec"
     },
     {
       "path": "docs/reference.html",
@@ -297,7 +297,7 @@
     {
       "path": "docs/studio-worker.js",
       "bytes": 2047,
-      "sha256": "f8ee10c470da949613f171cf3b32f7e4a33fd7ef87adc33ba0a23231f0151890"
+      "sha256": "3171b83dba786472175add43befb6f1de73b090ee7aa50e2ef8c06594f3a9a6d"
     },
     {
       "path": "docs/studio.css",
@@ -307,7 +307,7 @@
     {
       "path": "docs/studio.js",
       "bytes": 26221,
-      "sha256": "37d8fda126a5145e482e493a2df811ce177d4faa6765ae17b00eefdba7ab771c"
+      "sha256": "74339ac96994bd78e0b3d324fa524e209f6f0f6368e778214d655709b94ec3cd"
     },
     {
       "path": "docs/style.css",
@@ -6051,8 +6051,8 @@
     },
     {
       "path": "procedural.py",
-      "bytes": 26094,
-      "sha256": "9eb916f92fcc8e89fbe971e214914ba5beec4504563726b4dc74c80d3029775b"
+      "bytes": 26922,
+      "sha256": "252a9b5253ef62277d2bb02a3a3345ae84bee178e6439e657fd08cbdc6513b3a"
     },
     {
       "path": "prova_procedural.png",
@@ -7376,8 +7376,8 @@
     },
     {
       "path": "tests/test_procedural_core.py",
-      "bytes": 9876,
-      "sha256": "01e5177ac78a98c61581b8d577649c3d70ee18fff43cc69c86d19e39ad25d97e"
+      "bytes": 10402,
+      "sha256": "51ee0bf0026456f00d68deb95b87e70c1e4a43b9d0fe99e297acd32543d77faa"
     },
     {
       "path": "validation/backend_report.json",
@@ -10456,8 +10456,8 @@
     },
     {
       "path": "validation/procedural_core_report.json",
-      "bytes": 540,
-      "sha256": "b094f937f4d6cac7b77168275b4948aee541f399f5b748bcd33f52856e2f4fce"
+      "bytes": 651,
+      "sha256": "5a52f1ee400f7a323c011e5875b4e014d477bc609d76a54c8abd60c4c9410fcf"
     },
     {
       "path": "validation/python/Apartemazements.json",
@@ -13526,8 +13526,8 @@
     },
     {
       "path": "validation/test_procedural_core_browser.cjs",
-      "bytes": 2360,
-      "sha256": "980a3a7c09b0a3b83a6e757174837fbfc83f184e4a0c96c52c30bd3b587aa1ab"
+      "bytes": 2341,
+      "sha256": "9647815f27060dbe67ca03c116bf60ea57814057ce7551441c768be1a6544321"
     },
     {
       "path": "validation/test_rng.py",

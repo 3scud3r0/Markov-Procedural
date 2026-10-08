@@ -267,6 +267,8 @@ class Context:
     rng: RandomStream
     engine: Procedural
     data: dict[str, Any] = field(default_factory=dict)
+    _noise_streams: dict[bytes, RandomStream] = field(default_factory=dict, repr=False)
+    _noise_values: dict[tuple[bytes, tuple[int, ...]], float] = field(default_factory=dict, repr=False)
 
     def fork(self, key: Any) -> Context:
         return Context(self.rng.fork(key), self.engine)
@@ -305,12 +307,25 @@ class Context:
         cells = [math.floor(c) for c in coords]
         fractions = [c - i for c, i in zip(coords, cells)]
         smooth = [t * t * t * (t * (t * 6 - 15) + 10) for t in fractions]
-        stream = self.rng.fork(["noise", key])
+        address = _encode(key)
+        stream = self._noise_streams.get(address)
+        if stream is None:
+            stream = self.rng.fork(["noise", key])
+            if len(self._noise_streams) >= 128:
+                self._noise_streams.pop(next(iter(self._noise_streams)))
+            self._noise_streams[address] = stream
         value = 0.0
         for corner in itertools.product((0, 1), repeat=len(coords)):
-            lattice = [i + bit for i, bit in zip(cells, corner)]
+            lattice = tuple(i + bit for i, bit in zip(cells, corner))
             weight = math.prod(t if bit else 1 - t for t, bit in zip(smooth, corner))
-            value += (stream.fork(lattice).random() * 2 - 1) * weight
+            cache_key = (stream._digest, lattice)
+            sample = self._noise_values.get(cache_key)
+            if sample is None:
+                sample = stream.fork(lattice).random() * 2 - 1
+                if len(self._noise_values) >= 8192:
+                    self._noise_values.pop(next(iter(self._noise_values)))
+                self._noise_values[cache_key] = sample
+            value += sample * weight
         return max(-1.0, min(1.0, value))
 
     def fbm(self, *coordinates: float, octaves: int = 4, frequency: float = 1,
