@@ -1,0 +1,110 @@
+{
+  "schema": "markovjunior.backend-validation/1",
+  "functions": 33,
+  "input_vectors": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      -7,
+      11
+    ],
+    [
+      42,
+      23
+    ],
+    [
+      -999,
+      77
+    ],
+    [
+      1000000,
+      1000000
+    ],
+    [
+      -1000000,
+      -1000000
+    ],
+    [
+      1000000,
+      -1000000
+    ],
+    [
+      -1000000,
+      1000000
+    ]
+  ],
+  "seeds": [
+    -2147483648,
+    -1,
+    0,
+    42,
+    12345,
+    161803398,
+    1923919228,
+    2147483647
+  ],
+  "per_backend_checks": 297,
+  "total_checks": 2673,
+  "targets": [
+    {
+      "target": "python",
+      "status": "pass",
+      "checks": 297,
+      "version": "3.12.14"
+    },
+    {
+      "target": "sql",
+      "status": "pass",
+      "checks": 297,
+      "version": "3.53.1"
+    },
+    {
+      "target": "javascript",
+      "status": "pass",
+      "checks": 297,
+      "version": "v24.19.0"
+    },
+    {
+      "target": "typescript",
+      "status": "pass",
+      "checks": 297,
+      "version": "Version 7.0.2"
+    },
+    {
+      "target": "c",
+      "status": "pass",
+      "checks": 297,
+      "version": "gcc (Debian 14.2.0-19) 14.2.0"
+    },
+    {
+      "target": "cpp",
+      "status": "pass",
+      "checks": 297,
+      "version": "g++ (Debian 14.2.0-19) 14.2.0"
+    },
+    {
+      "target": "rust",
+      "status": "pass",
+      "checks": 297,
+      "version": "rustc 1.99.0 (b940084d7 2026-09-28)"
+    },
+    {
+      "target": "go",
+      "status": "pass",
+      "checks": 297,
+      "version": "go version go1.27.1 linux/amd64"
+    },
+    {
+      "target": "lua",
+      "status": "pass",
+      "checks": 297,
+      "version": "Lua 5.4.8  Copyright (C) 1994-2025 Lua.org, PUC-Rio"
+    }
+  ]
+}

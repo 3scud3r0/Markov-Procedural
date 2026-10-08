@@ -1,0 +1,665 @@
+{
+  "schema": "markovjunior.document/1",
+  "kind": "program",
+  "metadata": {
+    "input_limit": 1000000,
+    "job": "calculos",
+    "generator": "program",
+    "seed": 1857912776,
+    "project_seed": 42,
+    "instance": 2
+  },
+  "value": {
+    "schema": "markovjunior.program/1",
+    "input_limit": 1000000,
+    "program": {
+      "node": "Program",
+      "functions": [
+        {
+          "node": "Function",
+          "name": "proc_000",
+          "parameters": [
+            "x",
+            "y"
+          ],
+          "body": [
+            {
+              "node": "Set",
+              "name": "value",
+              "value": {
+                "node": "Binary",
+                "op": "+",
+                "left": {
+                  "node": "Binary",
+                  "op": "+",
+                  "left": {
+                    "node": "Binary",
+                    "op": "-",
+                    "left": {
+                      "node": "Literal",
+                      "value": 4
+                    },
+                    "right": {
+                      "node": "Literal",
+                      "value": -4
+                    }
+                  },
+                  "right": {
+                    "node": "Binary",
+                    "op": "-",
+                    "left": {
+                      "node": "Literal",
+                      "value": 1
+                    },
+                    "right": {
+                      "node": "Ref",
+                      "name": "x"
+                    }
+                  }
+                },
+                "right": {
+                  "node": "Binary",
+                  "op": "+",
+                  "left": {
+                    "node": "Binary",
+                    "op": "*",
+                    "left": {
+                      "node": "Ref",
+                      "name": "x"
+                    },
+                    "right": {
+                      "node": "Literal",
+                      "value": 3
+                    }
+                  },
+                  "right": {
+                    "node": "Binary",
+                    "op": "-",
+                    "left": {
+                      "node": "Literal",
+                      "value": 3
+                    },
+                    "right": {
+                      "node": "Literal",
+                      "value": 0
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "node": "Repeat",
+              "index": "iteration",
+              "count": 5,
+              "body": [
+                {
+                  "node": "If",
+                  "condition": {
+                    "node": "Binary",
+                    "op": ">",
+                    "left": {
+                      "node": "Ref",
+                      "name": "value"
+                    },
+                    "right": {
+                      "node": "Binary",
+                      "op": "+",
+                      "left": {
+                        "node": "Ref",
+                        "name": "x"
+                      },
+                      "right": {
+                        "node": "Literal",
+                        "value": -14
+                      }
+                    }
+                  },
+                  "yes": [
+                    {
+                      "node": "Set",
+                      "name": "value",
+                      "value": {
+                        "node": "Binary",
+                        "op": "+",
+                        "left": {
+                          "node": "Ref",
+                          "name": "value"
+                        },
+                        "right": {
+                          "node": "Binary",
+                          "op": "+",
+                          "left": {
+                            "node": "Ref",
+                            "name": "iteration"
+                          },
+                          "right": {
+                            "node": "Literal",
+                            "value": 5
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "no": [
+                    {
+                      "node": "Set",
+                      "name": "value",
+                      "value": {
+                        "node": "Binary",
+                        "op": "-",
+                        "left": {
+                          "node": "Ref",
+                          "name": "value"
+                        },
+                        "right": {
+                          "node": "Literal",
+                          "value": 9
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "node": "Set",
+                  "name": "value",
+                  "value": {
+                    "node": "Binary",
+                    "op": "+",
+                    "left": {
+                      "node": "Ref",
+                      "name": "value"
+                    },
+                    "right": {
+                      "node": "Ref",
+                      "name": "y"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "node": "Return",
+              "value": {
+                "node": "Ref",
+                "name": "value"
+              }
+            }
+          ]
+        },
+        {
+          "node": "Function",
+          "name": "proc_001",
+          "parameters": [
+            "x",
+            "y"
+          ],
+          "body": [
+            {
+              "node": "Set",
+              "name": "value",
+              "value": {
+                "node": "Binary",
+                "op": "*",
+                "left": {
+                  "node": "Binary",
+                  "op": "*",
+                  "left": {
+                    "node": "Binary",
+                    "op": "-",
+                    "left": {
+                      "node": "Literal",
+                      "value": -8
+                    },
+                    "right": {
+                      "node": "Ref",
+                      "name": "y"
+                    }
+                  },
+                  "right": {
+                    "node": "Literal",
+                    "value": 9
+                  }
+                },
+                "right": {
+                  "node": "Literal",
+                  "value": 1
+                }
+              }
+            },
+            {
+              "node": "Repeat",
+              "index": "iteration",
+              "count": 5,
+              "body": [
+                {
+                  "node": "If",
+                  "condition": {
+                    "node": "Binary",
+                    "op": ">",
+                    "left": {
+                      "node": "Ref",
+                      "name": "value"
+                    },
+                    "right": {
+                      "node": "Binary",
+                      "op": "+",
+                      "left": {
+                        "node": "Ref",
+                        "name": "x"
+                      },
+                      "right": {
+                        "node": "Literal",
+                        "value": -16
+                      }
+                    }
+                  },
+                  "yes": [
+                    {
+                      "node": "Set",
+                      "name": "value",
+                      "value": {
+                        "node": "Binary",
+                        "op": "+",
+                        "left": {
+                          "node": "Ref",
+                          "name": "value"
+                        },
+                        "right": {
+                          "node": "Binary",
+                          "op": "+",
+                          "left": {
+                            "node": "Ref",
+                            "name": "iteration"
+                          },
+                          "right": {
+                            "node": "Literal",
+                            "value": 7
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "no": [
+                    {
+                      "node": "Set",
+                      "name": "value",
+                      "value": {
+                        "node": "Binary",
+                        "op": "-",
+                        "left": {
+                          "node": "Ref",
+                          "name": "value"
+                        },
+                        "right": {
+                          "node": "Literal",
+                          "value": 9
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "node": "Set",
+                  "name": "value",
+                  "value": {
+                    "node": "Binary",
+                    "op": "+",
+                    "left": {
+                      "node": "Ref",
+                      "name": "value"
+                    },
+                    "right": {
+                      "node": "Ref",
+                      "name": "y"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "node": "Return",
+              "value": {
+                "node": "Ref",
+                "name": "value"
+              }
+            }
+          ]
+        },
+        {
+          "node": "Function",
+          "name": "proc_002",
+          "parameters": [
+            "x",
+            "y"
+          ],
+          "body": [
+            {
+              "node": "Set",
+              "name": "value",
+              "value": {
+                "node": "Binary",
+                "op": "+",
+                "left": {
+                  "node": "Binary",
+                  "op": "+",
+                  "left": {
+                    "node": "Binary",
+                    "op": "-",
+                    "left": {
+                      "node": "Ref",
+                      "name": "x"
+                    },
+                    "right": {
+                      "node": "Literal",
+                      "value": 3
+                    }
+                  },
+                  "right": {
+                    "node": "Binary",
+                    "op": "+",
+                    "left": {
+                      "node": "Ref",
+                      "name": "y"
+                    },
+                    "right": {
+                      "node": "Ref",
+                      "name": "x"
+                    }
+                  }
+                },
+                "right": {
+                  "node": "Binary",
+                  "op": "+",
+                  "left": {
+                    "node": "Binary",
+                    "op": "*",
+                    "left": {
+                      "node": "Ref",
+                      "name": "x"
+                    },
+                    "right": {
+                      "node": "Literal",
+                      "value": 4
+                    }
+                  },
+                  "right": {
+                    "node": "Binary",
+                    "op": "+",
+                    "left": {
+                      "node": "Ref",
+                      "name": "y"
+                    },
+                    "right": {
+                      "node": "Ref",
+                      "name": "y"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "node": "Repeat",
+              "index": "iteration",
+              "count": 5,
+              "body": [
+                {
+                  "node": "If",
+                  "condition": {
+                    "node": "Binary",
+                    "op": "==",
+                    "left": {
+                      "node": "Ref",
+                      "name": "value"
+                    },
+                    "right": {
+                      "node": "Binary",
+                      "op": "+",
+                      "left": {
+                        "node": "Ref",
+                        "name": "x"
+                      },
+                      "right": {
+                        "node": "Literal",
+                        "value": 16
+                      }
+                    }
+                  },
+                  "yes": [
+                    {
+                      "node": "Set",
+                      "name": "value",
+                      "value": {
+                        "node": "Binary",
+                        "op": "+",
+                        "left": {
+                          "node": "Ref",
+                          "name": "value"
+                        },
+                        "right": {
+                          "node": "Binary",
+                          "op": "+",
+                          "left": {
+                            "node": "Ref",
+                            "name": "iteration"
+                          },
+                          "right": {
+                            "node": "Literal",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "no": [
+                    {
+                      "node": "Set",
+                      "name": "value",
+                      "value": {
+                        "node": "Binary",
+                        "op": "-",
+                        "left": {
+                          "node": "Ref",
+                          "name": "value"
+                        },
+                        "right": {
+                          "node": "Literal",
+                          "value": 7
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "node": "Set",
+                  "name": "value",
+                  "value": {
+                    "node": "Binary",
+                    "op": "+",
+                    "left": {
+                      "node": "Ref",
+                      "name": "value"
+                    },
+                    "right": {
+                      "node": "Ref",
+                      "name": "y"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "node": "Return",
+              "value": {
+                "node": "Ref",
+                "name": "value"
+              }
+            }
+          ]
+        },
+        {
+          "node": "Function",
+          "name": "proc_003",
+          "parameters": [
+            "x",
+            "y"
+          ],
+          "body": [
+            {
+              "node": "Set",
+              "name": "value",
+              "value": {
+                "node": "Binary",
+                "op": "-",
+                "left": {
+                  "node": "Binary",
+                  "op": "-",
+                  "left": {
+                    "node": "Binary",
+                    "op": "+",
+                    "left": {
+                      "node": "Literal",
+                      "value": 4
+                    },
+                    "right": {
+                      "node": "Ref",
+                      "name": "y"
+                    }
+                  },
+                  "right": {
+                    "node": "Binary",
+                    "op": "+",
+                    "left": {
+                      "node": "Literal",
+                      "value": -2
+                    },
+                    "right": {
+                      "node": "Ref",
+                      "name": "y"
+                    }
+                  }
+                },
+                "right": {
+                  "node": "Binary",
+                  "op": "*",
+                  "left": {
+                    "node": "Binary",
+                    "op": "*",
+                    "left": {
+                      "node": "Ref",
+                      "name": "y"
+                    },
+                    "right": {
+                      "node": "Literal",
+                      "value": 9
+                    }
+                  },
+                  "right": {
+                    "node": "Literal",
+                    "value": 4
+                  }
+                }
+              }
+            },
+            {
+              "node": "Repeat",
+              "index": "iteration",
+              "count": 5,
+              "body": [
+                {
+                  "node": "If",
+                  "condition": {
+                    "node": "Binary",
+                    "op": "<",
+                    "left": {
+                      "node": "Ref",
+                      "name": "value"
+                    },
+                    "right": {
+                      "node": "Binary",
+                      "op": "+",
+                      "left": {
+                        "node": "Ref",
+                        "name": "x"
+                      },
+                      "right": {
+                        "node": "Literal",
+                        "value": 0
+                      }
+                    }
+                  },
+                  "yes": [
+                    {
+                      "node": "Set",
+                      "name": "value",
+                      "value": {
+                        "node": "Binary",
+                        "op": "+",
+                        "left": {
+                          "node": "Ref",
+                          "name": "value"
+                        },
+                        "right": {
+                          "node": "Binary",
+                          "op": "+",
+                          "left": {
+                            "node": "Ref",
+                            "name": "iteration"
+                          },
+                          "right": {
+                            "node": "Literal",
+                            "value": 1
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "no": [
+                    {
+                      "node": "Set",
+                      "name": "value",
+                      "value": {
+                        "node": "Binary",
+                        "op": "-",
+                        "left": {
+                          "node": "Ref",
+                          "name": "value"
+                        },
+                        "right": {
+                          "node": "Literal",
+                          "value": 5
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "node": "Set",
+                  "name": "value",
+                  "value": {
+                    "node": "Binary",
+                    "op": "+",
+                    "left": {
+                      "node": "Ref",
+                      "name": "value"
+                    },
+                    "right": {
+                      "node": "Ref",
+                      "name": "y"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "node": "Return",
+              "value": {
+                "node": "Ref",
+                "name": "value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

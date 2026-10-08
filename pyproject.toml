@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "markovjunior-procedural"
+version = "0.2.0"
+description = "Seeded procedural programs, custom grammars, data and scenes, based on MarkovJunior"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = ["Pillow>=10,<13"]
+
+[project.optional-dependencies]
+validation = ["numpy>=1.26,<3"]
+preview = ["CairoSVG>=2.7,<3"]
+
+[project.scripts]
+markovjunior = "markovjunior.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["markovjunior", "markovjunior.procedural"]
+
+[tool.setuptools.package-data]
+markovjunior = ["assets/**/*", "assets/*"]

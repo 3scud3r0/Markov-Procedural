@@ -1,0 +1,43 @@
+{
+  "schema": "markovjunior.document/1",
+  "kind": "text",
+  "metadata": {
+    "expansions": 7,
+    "trace": [
+      {
+        "rule": "historia",
+        "alternative": 0
+      },
+      {
+        "rule": "personagem",
+        "alternative": 1
+      },
+      {
+        "rule": "lugar",
+        "alternative": 2
+      },
+      {
+        "rule": "evento",
+        "alternative": 0
+      },
+      {
+        "rule": "objeto",
+        "alternative": 2
+      },
+      {
+        "rule": "acao",
+        "alternative": 1
+      },
+      {
+        "rule": "final",
+        "alternative": 1
+      }
+    ],
+    "job": "narrativa",
+    "generator": "grammar",
+    "seed": 1544533856,
+    "project_seed": 42,
+    "instance": 0
+  },
+  "value": "Um jardineiro de estrelas chegou a uma estação abandonada. Encontrou uma semente luminosa e decidiu plantar uma memória. A viagem estava apenas começando."
+}

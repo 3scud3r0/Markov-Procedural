@@ -1,0 +1,509 @@
+{
+  "schema": "markovjunior.generation/1",
+  "version": 1,
+  "seed": 42,
+  "jobs": [
+    {
+      "name": "calculos",
+      "instance": 0,
+      "generator": "program",
+      "kind": "program",
+      "seed": 2073189387,
+      "params": {
+        "functions": 4,
+        "expression_depth": 3,
+        "iterations": 5
+      },
+      "outputs": [
+        {
+          "target": "python",
+          "path": "calculos/variant_000/calculos.py",
+          "media_type": "text/x-python",
+          "bytes": 1209,
+          "sha256": "247203474041c3f88255ece0087970dc64939bc315e66b0a0f378d5f5ab4b08b"
+        },
+        {
+          "target": "javascript",
+          "path": "calculos/variant_000/calculos.mjs",
+          "media_type": "text/javascript",
+          "bytes": 1420,
+          "sha256": "1b02ffc9226b7c6cf9b9056e20dc3548475348c38149c80549072444bf84f812"
+        },
+        {
+          "target": "typescript",
+          "path": "calculos/variant_000/calculos.ts",
+          "media_type": "text/typescript",
+          "bytes": 1516,
+          "sha256": "47071bf0fef9c6b26f42c38892e41f21bf0d3d82d2af12af4157ccbb00a56965"
+        },
+        {
+          "target": "c",
+          "path": "calculos/variant_000/calculos.c",
+          "media_type": "text/x-c",
+          "bytes": 1694,
+          "sha256": "001ced6037f795c01ed2c3390c6b744ee86d34c88d3c14eb2829a51883b692e1"
+        },
+        {
+          "target": "cpp",
+          "path": "calculos/variant_000/calculos.cpp",
+          "media_type": "text/x-c++",
+          "bytes": 1910,
+          "sha256": "23ed16cd96705c044ff4dff05ffcdcd6f9ac67d96cf3f7acdef8ffd33d3ab60b"
+        },
+        {
+          "target": "rust",
+          "path": "calculos/variant_000/calculos.rs",
+          "media_type": "text/x-rust",
+          "bytes": 1444,
+          "sha256": "3361a0124c5d4b77106d0d28d1e42af05edd58f920ed0da3cb3db538acb24a2f"
+        },
+        {
+          "target": "go",
+          "path": "calculos/variant_000/calculos.go",
+          "media_type": "text/x-go",
+          "bytes": 1638,
+          "sha256": "62302298e4822a2b0a7816bd96dc1c5528df860072c84928c77696e905633dc3"
+        },
+        {
+          "target": "lua",
+          "path": "calculos/variant_000/calculos.lua",
+          "media_type": "text/x-lua",
+          "bytes": 1390,
+          "sha256": "b02aa4236ff094a74a05fdc42fc8d50aa14167b5c4449e81e9c5fe004561a0e1"
+        },
+        {
+          "target": "sql",
+          "path": "calculos/variant_000/calculos.sql",
+          "media_type": "application/sql",
+          "bytes": 5237,
+          "sha256": "7c5fa1c48e395def95a86d252005f6216a8462b3d7e65ed96b50c82b61e83b73"
+        },
+        {
+          "target": "json",
+          "path": "calculos/variant_000/calculos.json",
+          "media_type": "application/json",
+          "bytes": 18940,
+          "sha256": "a722f1c6bd682167636a4345387a8d6b6dbb50cddcac17025ba59ef5d1cf7eac"
+        }
+      ]
+    },
+    {
+      "name": "calculos",
+      "instance": 1,
+      "generator": "program",
+      "kind": "program",
+      "seed": 316610251,
+      "params": {
+        "functions": 4,
+        "expression_depth": 3,
+        "iterations": 5
+      },
+      "outputs": [
+        {
+          "target": "python",
+          "path": "calculos/variant_001/calculos.py",
+          "media_type": "text/x-python",
+          "bytes": 1188,
+          "sha256": "7411775a13c669a7f649c5dccd99cad1d6a800bee932b270bdbdcacb9c927121"
+        },
+        {
+          "target": "javascript",
+          "path": "calculos/variant_001/calculos.mjs",
+          "media_type": "text/javascript",
+          "bytes": 1399,
+          "sha256": "c08de25e50ed2ad070a0d1975bbd0fbb6d7c29ccebe3ab8dd8400e3a6b82878b"
+        },
+        {
+          "target": "typescript",
+          "path": "calculos/variant_001/calculos.ts",
+          "media_type": "text/typescript",
+          "bytes": 1495,
+          "sha256": "5ef02d703d3b5a2d4182806db8225467ec6ab924380025afe348b5ea2f2fc01e"
+        },
+        {
+          "target": "c",
+          "path": "calculos/variant_001/calculos.c",
+          "media_type": "text/x-c",
+          "bytes": 1646,
+          "sha256": "bb8be8f54122f6f9165b112d08a608ec4fb104cba56a6230a8caecfc94214fb6"
+        },
+        {
+          "target": "cpp",
+          "path": "calculos/variant_001/calculos.cpp",
+          "media_type": "text/x-c++",
+          "bytes": 1847,
+          "sha256": "26d7869bb8898be42eb93689036a0411604ca129029fb8f69a73cfec545c355f"
+        },
+        {
+          "target": "rust",
+          "path": "calculos/variant_001/calculos.rs",
+          "media_type": "text/x-rust",
+          "bytes": 1411,
+          "sha256": "e9b178e35578416eae9ca98b7720b09ccad4e5ffc602fee2e67ba20c0aa33ab2"
+        },
+        {
+          "target": "go",
+          "path": "calculos/variant_001/calculos.go",
+          "media_type": "text/x-go",
+          "bytes": 1596,
+          "sha256": "3cee6fae45392079aeed6db4aeeed9ec1cc6173f057c008743b60b6932e511b8"
+        },
+        {
+          "target": "lua",
+          "path": "calculos/variant_001/calculos.lua",
+          "media_type": "text/x-lua",
+          "bytes": 1369,
+          "sha256": "301c760396489a0c38c8ec67b58eef8a31e32dd53ddd3b21ce9e9ee40ca0b4a8"
+        },
+        {
+          "target": "sql",
+          "path": "calculos/variant_001/calculos.sql",
+          "media_type": "application/sql",
+          "bytes": 5216,
+          "sha256": "4aee7f8650cce6720d147d2088956b776bb346e7f91c26a1d0f2fce3129fa85f"
+        },
+        {
+          "target": "json",
+          "path": "calculos/variant_001/calculos.json",
+          "media_type": "application/json",
+          "bytes": 18193,
+          "sha256": "1d2403c6a653a6b68b0cf5dd94dec60511c684297e10e8222fd166381bb1d1a9"
+        }
+      ]
+    },
+    {
+      "name": "calculos",
+      "instance": 2,
+      "generator": "program",
+      "kind": "program",
+      "seed": 1857912776,
+      "params": {
+        "functions": 4,
+        "expression_depth": 3,
+        "iterations": 5
+      },
+      "outputs": [
+        {
+          "target": "python",
+          "path": "calculos/variant_002/calculos.py",
+          "media_type": "text/x-python",
+          "bytes": 1223,
+          "sha256": "0009c4babacd84de68ffec0736448f1533a3399be30fc96cfa01ec562f621fc0"
+        },
+        {
+          "target": "javascript",
+          "path": "calculos/variant_002/calculos.mjs",
+          "media_type": "text/javascript",
+          "bytes": 1434,
+          "sha256": "09d111bbc2205ec26fbf454e23d823d1bbb06b89b8970b700656bc89663f6781"
+        },
+        {
+          "target": "typescript",
+          "path": "calculos/variant_002/calculos.ts",
+          "media_type": "text/typescript",
+          "bytes": 1530,
+          "sha256": "ad0d4167e06ff67d04348ed64b25126f1e9ef6396d1ba40530ee2c94405ad910"
+        },
+        {
+          "target": "c",
+          "path": "calculos/variant_002/calculos.c",
+          "media_type": "text/x-c",
+          "bytes": 1735,
+          "sha256": "212e938068e6f72ddb62de4914ce2db3d36979db6c810a5884e975031d2068c2"
+        },
+        {
+          "target": "cpp",
+          "path": "calculos/variant_002/calculos.cpp",
+          "media_type": "text/x-c++",
+          "bytes": 1966,
+          "sha256": "ed6105137e2937e54375d5329a5e1f756fec0e6f540f7d0b3945946f86ce2c93"
+        },
+        {
+          "target": "rust",
+          "path": "calculos/variant_002/calculos.rs",
+          "media_type": "text/x-rust",
+          "bytes": 1470,
+          "sha256": "bece36ed7cc98e89d0e27ce19e1436e3d6c39cb3b98095f959a8621ba490f9f1"
+        },
+        {
+          "target": "go",
+          "path": "calculos/variant_002/calculos.go",
+          "media_type": "text/x-go",
+          "bytes": 1673,
+          "sha256": "d8061f81b4a668459983014a4bfc50d180c1d87f6f4c6bb7a63f44074501457a"
+        },
+        {
+          "target": "lua",
+          "path": "calculos/variant_002/calculos.lua",
+          "media_type": "text/x-lua",
+          "bytes": 1404,
+          "sha256": "6817b29881b7f9b06fc566e35b5e1b0d47eebb8d97c809fce285cc9a22ea847a"
+        },
+        {
+          "target": "sql",
+          "path": "calculos/variant_002/calculos.sql",
+          "media_type": "application/sql",
+          "bytes": 5259,
+          "sha256": "657bec82bd80d58e620bb63821ab0601f91d8dc69e0bdf9ce5109b865b41f976"
+        },
+        {
+          "target": "json",
+          "path": "calculos/variant_002/calculos.json",
+          "media_type": "application/json",
+          "bytes": 19435,
+          "sha256": "7b6a32d1664b8aad7fc5ddf8fa5e7b0e3c2de479627019dc30f574a2980e1fbf"
+        }
+      ]
+    },
+    {
+      "name": "jardim",
+      "instance": 0,
+      "generator": "scene",
+      "kind": "scene",
+      "seed": 290706085,
+      "params": {
+        "width": 1200,
+        "height": 700,
+        "trees": 9,
+        "depth": 6
+      },
+      "outputs": [
+        {
+          "target": "svg",
+          "path": "jardim/jardim.svg",
+          "media_type": "image/svg+xml",
+          "bytes": 199875,
+          "sha256": "0c7b5da57168e7f55df9fa1cdfa5261d8df0a16e1add2a360ab21aa432301161"
+        },
+        {
+          "target": "json",
+          "path": "jardim/jardim.json",
+          "media_type": "application/json",
+          "bytes": 417159,
+          "sha256": "65ef6400ab4b26d42ebd3093ed52b4948e6a7326d8325be735260d990fdba223"
+        }
+      ]
+    },
+    {
+      "name": "labirinto",
+      "instance": 0,
+      "generator": "grid",
+      "kind": "scene",
+      "seed": 1139945814,
+      "params": {
+        "model": "MazeGrowth",
+        "width": 31,
+        "height": 31,
+        "cell_size": 14
+      },
+      "outputs": [
+        {
+          "target": "svg",
+          "path": "labirinto/labirinto.svg",
+          "media_type": "image/svg+xml",
+          "bytes": 59153,
+          "sha256": "bffc767affe97a1259b9a2e0e0d0098a123f4480508ee7f93456751cb2af0141"
+        },
+        {
+          "target": "json",
+          "path": "labirinto/labirinto.json",
+          "media_type": "application/json",
+          "bytes": 198775,
+          "sha256": "92aaa04fd6b8b6f3b09868a3fafec7f99c1c1938f604678a12be23e5dfac981c"
+        }
+      ]
+    },
+    {
+      "name": "narrativa",
+      "instance": 0,
+      "generator": "grammar",
+      "kind": "text",
+      "seed": 1544533856,
+      "params": {
+        "start": "<historia>",
+        "max_depth": 12,
+        "rules": {
+          "historia": [
+            "<personagem> chegou a <lugar>. <evento> <final>"
+          ],
+          "personagem": [
+            "Uma cartógrafa",
+            "Um jardineiro de estrelas",
+            "Uma exploradora de ruínas"
+          ],
+          "lugar": [
+            "uma cidade suspensa",
+            "um bosque de vidro",
+            "uma estação abandonada"
+          ],
+          "evento": [
+            {
+              "text": "Encontrou <objeto> e decidiu <acao>.",
+              "weight": 3
+            },
+            {
+              "text": "Ouviu um chamado. <evento>",
+              "weight": 1
+            }
+          ],
+          "objeto": [
+            "uma chave que sonhava",
+            "um mapa ainda em branco",
+            "uma semente luminosa"
+          ],
+          "acao": [
+            "abrir um caminho",
+            "plantar uma memória",
+            "seguir as constelações"
+          ],
+          "final": [
+            "O mundo ganhou um novo nome.",
+            "A viagem estava apenas começando."
+          ]
+        }
+      },
+      "outputs": [
+        {
+          "target": "text",
+          "path": "narrativa/narrativa.txt",
+          "media_type": "text/plain",
+          "bytes": 159,
+          "sha256": "f9c42b15f06f59559f3c3532e2ca5e4f9cf69b766a2a997ba2a72f1df9a93613"
+        },
+        {
+          "target": "markdown",
+          "path": "narrativa/narrativa.md",
+          "media_type": "text/markdown",
+          "bytes": 172,
+          "sha256": "8f877ec9011a79429bbbd9336f425a818797b26c62f5a38230834e4fa55da9e5"
+        },
+        {
+          "target": "json",
+          "path": "narrativa/narrativa.json",
+          "media_type": "application/json",
+          "bytes": 892,
+          "sha256": "9aff03735e84d384f11187a31258448f0286d9ea683df2d8564c6fa699298004"
+        }
+      ]
+    },
+    {
+      "name": "linguagem_jardim",
+      "instance": 0,
+      "generator": "grammar",
+      "kind": "text",
+      "seed": 48131597,
+      "params": {
+        "start": "<programa>",
+        "max_depth": 16,
+        "rules": {
+          "programa": [
+            "garden \"<nome>\" {\n<plantas>}\n"
+          ],
+          "nome": [
+            "Luminosa",
+            "Aurora",
+            "Jardim de Memórias"
+          ],
+          "plantas": [
+            {
+              "text": "<planta>",
+              "weight": 1
+            },
+            {
+              "text": "<planta><plantas>",
+              "weight": 4
+            }
+          ],
+          "planta": [
+            "  plant <especie> at (<int:10:950>, <int:20:550>) size <int:3:18>;\n"
+          ],
+          "especie": [
+            "oak",
+            "fern",
+            "willow",
+            "flower"
+          ]
+        }
+      },
+      "outputs": [
+        {
+          "target": "text",
+          "path": "linguagem_jardim/linguagem_jardim.txt",
+          "media_type": "text/plain",
+          "bytes": 59,
+          "sha256": "fc0d9b9149c241a08bc4e5d9146ade14598760f5dea16a4fd3b34044aac1b26a"
+        },
+        {
+          "target": "json",
+          "path": "linguagem_jardim/linguagem_jardim.json",
+          "media_type": "application/json",
+          "bytes": 666,
+          "sha256": "3b54bd0fd800900f639535c7c7406584c6c7319f7a0156f981e850b576cb521a"
+        }
+      ]
+    },
+    {
+      "name": "entidades",
+      "instance": 0,
+      "generator": "data",
+      "kind": "data",
+      "seed": 1629339888,
+      "params": {
+        "schema": {
+          "type": "array",
+          "length": 12,
+          "items": {
+            "type": "object",
+            "properties": {
+              "nome": {
+                "type": "string",
+                "length": 8
+              },
+              "classe": {
+                "type": "string",
+                "choices": [
+                  "explorador",
+                  "artesao",
+                  "guardiao"
+                ]
+              },
+              "energia": {
+                "type": "integer",
+                "min": 10,
+                "max": 100
+              },
+              "ativo": {
+                "type": "boolean",
+                "probability": 0.8
+              },
+              "posicao": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "number",
+                    "min": -100,
+                    "max": 100
+                  },
+                  "y": {
+                    "type": "number",
+                    "min": -100,
+                    "max": 100
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "outputs": [
+        {
+          "target": "json",
+          "path": "entidades/entidades.json",
+          "media_type": "application/json",
+          "bytes": 2447,
+          "sha256": "449afa051f28d1c0058b9ab64ea73ac9cccf0593f689816e77dbd900a49c4ad0"
+        }
+      ]
+    }
+  ]
+}

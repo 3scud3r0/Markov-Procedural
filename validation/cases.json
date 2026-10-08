@@ -1,0 +1,1917 @@
+[
+  {
+    "id": "Apartemazements",
+    "model": "Apartemazements",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Backtracker",
+    "model": "Backtracker",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BacktrackerCycle",
+    "model": "BacktrackerCycle",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Basic",
+    "model": "Basic",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BasicBrickWall",
+    "model": "BasicBrickWall",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BasicDijkstraDungeon",
+    "model": "BasicDijkstraDungeon",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BasicDijkstraFill",
+    "model": "BasicDijkstraFill",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BasicDungeonGrowth",
+    "model": "BasicDungeonGrowth",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BasicKeys",
+    "model": "BasicKeys",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BasicPartitioning",
+    "model": "BasicPartitioning",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BasicSkyline",
+    "model": "BasicSkyline",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BasicSnake",
+    "model": "BasicSnake",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BernoulliPercolation",
+    "model": "BernoulliPercolation",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BiasedGrowth",
+    "model": "BiasedGrowth",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BiasedGrowthContraction",
+    "model": "BiasedGrowthContraction",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BiasedMazeGrowth",
+    "model": "BiasedMazeGrowth",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BiasedVoronoi",
+    "model": "BiasedVoronoi",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BishopParity",
+    "model": "BishopParity",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "BlueNoise",
+    "model": "BlueNoise",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "CarmaTower",
+    "model": "CarmaTower",
+    "mx": 6,
+    "my": 6,
+    "mz": 4,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Cave",
+    "model": "Cave",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "CaveContour",
+    "model": "CaveContour",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "CentralCrawlers",
+    "model": "CentralCrawlers",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "CentralSAW",
+    "model": "CentralSAW",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ChainDungeon",
+    "model": "ChainDungeon",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ChainDungeonMaze",
+    "model": "ChainDungeonMaze",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ChainMaze",
+    "model": "ChainMaze",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Chase",
+    "model": "Chase",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Circuit",
+    "model": "Circuit",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ClosedSurface",
+    "model": "ClosedSurface",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ColoredKnots",
+    "model": "ColoredKnots",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "CompleteSAW",
+    "model": "CompleteSAW",
+    "mx": 8,
+    "my": 8,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "CompleteSAWSmart",
+    "model": "CompleteSAWSmart",
+    "mx": 8,
+    "my": 8,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ConnectedCaves",
+    "model": "ConnectedCaves",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ConstrainedCaves",
+    "model": "ConstrainedCaves",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Counting",
+    "model": "Counting",
+    "mx": 16,
+    "my": 16,
+    "mz": 6,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Coupling",
+    "model": "Coupling",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Crawlers",
+    "model": "Crawlers",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "CrawlersChase",
+    "model": "CrawlersChase",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "CrossCountry",
+    "model": "CrossCountry",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Cycles",
+    "model": "Cycles",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "DenseSAW",
+    "model": "DenseSAW",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "DiagonalPath",
+    "model": "DiagonalPath",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Digger",
+    "model": "Digger",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "DijkstraDungeon",
+    "model": "DijkstraDungeon",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Division",
+    "model": "Division",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "DualRetraction",
+    "model": "DualRetraction",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "DualRetraction3D",
+    "model": "DualRetraction3D",
+    "mx": 16,
+    "my": 16,
+    "mz": 6,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "DungeonGrowth",
+    "model": "DungeonGrowth",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "DwarfPath",
+    "model": "DwarfPath",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Dwarves",
+    "model": "Dwarves",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Escher",
+    "model": "Escher",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "EscherSurface",
+    "model": "EscherSurface",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "EuclideanPath",
+    "model": "EuclideanPath",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "FindLongCycle",
+    "model": "FindLongCycle",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "FireNoise",
+    "model": "FireNoise",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Flowers",
+    "model": "Flowers",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Forest",
+    "model": "Forest",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ForestFire",
+    "model": "ForestFire",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ForestFireCA",
+    "model": "ForestFireCA",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "GameOfLife",
+    "model": "GameOfLife",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "GoTo",
+    "model": "GoTo",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "GoToGradient",
+    "model": "GoToGradient",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "GrowTo",
+    "model": "GrowTo",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Growth",
+    "model": "Growth",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "GrowthCompetition",
+    "model": "GrowthCompetition",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "GrowthContraction",
+    "model": "GrowthContraction",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "GrowthWalk",
+    "model": "GrowthWalk",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "HamiltonianPath",
+    "model": "HamiltonianPath",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "HamiltonianPaths",
+    "model": "HamiltonianPaths",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Hills",
+    "model": "Hills",
+    "mx": 16,
+    "my": 16,
+    "mz": 6,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "IrregularMazeGrowth",
+    "model": "IrregularMazeGrowth",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "IrregularSAW",
+    "model": "IrregularSAW",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Island",
+    "model": "Island",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Keys",
+    "model": "Keys",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "KnightPatrol",
+    "model": "KnightPatrol",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Knots2D",
+    "model": "Knots2D",
+    "mx": 6,
+    "my": 6,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Knots3D",
+    "model": "Knots3D",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Laplace",
+    "model": "Laplace",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Lightning",
+    "model": "Lightning",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "LoopErasedWalk",
+    "model": "LoopErasedWalk",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "LoopGrowth",
+    "model": "LoopGrowth",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "LostCity",
+    "model": "LostCity",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "MarchingSquares",
+    "model": "MarchingSquares",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "MazeBacktracker",
+    "model": "MazeBacktracker",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "MazeGrowth",
+    "model": "MazeGrowth",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "MazeMap",
+    "model": "MazeMap",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "MazeTrail",
+    "model": "MazeTrail",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ModernHouse",
+    "model": "ModernHouse",
+    "mx": 6,
+    "my": 6,
+    "mz": 4,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "MultiHeadedDungeon",
+    "model": "MultiHeadedDungeon",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "MultiHeadedWalk",
+    "model": "MultiHeadedWalk",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "MultiHeadedWalkDungeon",
+    "model": "MultiHeadedWalkDungeon",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "MultiSokoban8",
+    "model": "MultiSokoban8",
+    "mx": 8,
+    "my": 8,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "MultiSokoban9",
+    "model": "MultiSokoban9",
+    "mx": 8,
+    "my": 8,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "NestedGrowth",
+    "model": "NestedGrowth",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "NoDeadEnds",
+    "model": "NoDeadEnds",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Noise",
+    "model": "Noise",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "NystromDungeon",
+    "model": "NystromDungeon",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "OddScale",
+    "model": "OddScale",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "OddScale3D",
+    "model": "OddScale3D",
+    "mx": 16,
+    "my": 16,
+    "mz": 6,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "OpenCave",
+    "model": "OpenCave",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "OpenCave3D",
+    "model": "OpenCave3D",
+    "mx": 16,
+    "my": 16,
+    "mz": 6,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "OrganicMechanic",
+    "model": "OrganicMechanic",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "OrientedEscher",
+    "model": "OrientedEscher",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "PaintCompetition",
+    "model": "PaintCompetition",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ParallelGrowth",
+    "model": "ParallelGrowth",
+    "mx": 16,
+    "my": 16,
+    "mz": 6,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ParallelMazeGrowth",
+    "model": "ParallelMazeGrowth",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "ParallelWalk",
+    "model": "ParallelWalk",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Partitioning",
+    "model": "Partitioning",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Percolation",
+    "model": "Percolation",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "PeriodicEscher",
+    "model": "PeriodicEscher",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "PillarsOfEternity",
+    "model": "PillarsOfEternity",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Push",
+    "model": "Push",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "PutColoredLs",
+    "model": "PutColoredLs",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "PutLs",
+    "model": "PutLs",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "RainbowGrowth",
+    "model": "RainbowGrowth",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "RandomWalk",
+    "model": "RandomWalk",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Rectangle",
+    "model": "Rectangle",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "RegularPath",
+    "model": "RegularPath",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "RegularSAW",
+    "model": "RegularSAW",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "RegularSAWRestart",
+    "model": "RegularSAWRestart",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "River",
+    "model": "River",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Rosettes",
+    "model": "Rosettes",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SAWRestart",
+    "model": "SAWRestart",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SeaVilla",
+    "model": "SeaVilla",
+    "mx": 6,
+    "my": 6,
+    "mz": 4,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SelectLargeCaves",
+    "model": "SelectLargeCaves",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SelectLongKnots",
+    "model": "SelectLongKnots",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SelfAvoidingWalk",
+    "model": "SelfAvoidingWalk",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SequentialSnake",
+    "model": "SequentialSnake",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SequentialSokoban",
+    "model": "SequentialSokoban",
+    "mx": 8,
+    "my": 8,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Sewers",
+    "model": "Sewers",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SmartSAW",
+    "model": "SmartSAW",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SmarterDigger",
+    "model": "SmarterDigger",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SmoothTrail",
+    "model": "SmoothTrail",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Snake",
+    "model": "Snake",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SnellLaw",
+    "model": "SnellLaw",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SoftPath",
+    "model": "SoftPath",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SokobanLevel1",
+    "model": "SokobanLevel1",
+    "mx": 8,
+    "my": 8,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SokobanLevel2",
+    "model": "SokobanLevel2",
+    "mx": 8,
+    "my": 8,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "StableCrawlers",
+    "model": "StableCrawlers",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "StairsPath",
+    "model": "StairsPath",
+    "mx": 16,
+    "my": 16,
+    "mz": 6,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "StochasticVoronoi",
+    "model": "StochasticVoronoi",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "StormySnellLaw",
+    "model": "StormySnellLaw",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "StrangeDungeon",
+    "model": "StrangeDungeon",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "StrangeGrowth",
+    "model": "StrangeGrowth",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "StrangeNoise",
+    "model": "StrangeNoise",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "SubmergedKnots",
+    "model": "SubmergedKnots",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Surface",
+    "model": "Surface",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Tetris",
+    "model": "Tetris",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Texture",
+    "model": "Texture",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "TileDungeon",
+    "model": "TileDungeon",
+    "mx": 6,
+    "my": 6,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "TilePath",
+    "model": "TilePath",
+    "mx": 6,
+    "my": 6,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Trail",
+    "model": "Trail",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Voronoi",
+    "model": "Voronoi",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "WaveBrickWall",
+    "model": "WaveBrickWall",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "WaveDungeon",
+    "model": "WaveDungeon",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "WaveFlowers",
+    "model": "WaveFlowers",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Wilson",
+    "model": "Wilson",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "WolfBasedApproach",
+    "model": "WolfBasedApproach",
+    "mx": 16,
+    "my": 16,
+    "mz": 1,
+    "seed": 42,
+    "steps": 300,
+    "pixelsize": 4
+  },
+  {
+    "id": "Flowers_full_0",
+    "model": "Flowers",
+    "mx": 60,
+    "my": 60,
+    "mz": 1,
+    "seed": 0,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "Flowers_full_12345",
+    "model": "Flowers",
+    "mx": 60,
+    "my": 60,
+    "mz": 1,
+    "seed": 12345,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "Flowers_full_2147483647",
+    "model": "Flowers",
+    "mx": 60,
+    "my": 60,
+    "mz": 1,
+    "seed": 2147483647,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "MazeGrowth_full_0",
+    "model": "MazeGrowth",
+    "mx": 59,
+    "my": 59,
+    "mz": 1,
+    "seed": 0,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "MazeGrowth_full_12345",
+    "model": "MazeGrowth",
+    "mx": 59,
+    "my": 59,
+    "mz": 1,
+    "seed": 12345,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "MazeGrowth_full_2147483647",
+    "model": "MazeGrowth",
+    "mx": 59,
+    "my": 59,
+    "mz": 1,
+    "seed": 2147483647,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "Cave_full_0",
+    "model": "Cave",
+    "mx": 60,
+    "my": 60,
+    "mz": 1,
+    "seed": 0,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "Cave_full_12345",
+    "model": "Cave",
+    "mx": 60,
+    "my": 60,
+    "mz": 1,
+    "seed": 12345,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "Cave_full_2147483647",
+    "model": "Cave",
+    "mx": 60,
+    "my": 60,
+    "mz": 1,
+    "seed": 2147483647,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "WaveBrickWall_full_0",
+    "model": "WaveBrickWall",
+    "mx": 60,
+    "my": 60,
+    "mz": 1,
+    "seed": 0,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "WaveBrickWall_full_12345",
+    "model": "WaveBrickWall",
+    "mx": 60,
+    "my": 60,
+    "mz": 1,
+    "seed": 12345,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "WaveBrickWall_full_2147483647",
+    "model": "WaveBrickWall",
+    "mx": 60,
+    "my": 60,
+    "mz": 1,
+    "seed": 2147483647,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "Knots3D_full_0",
+    "model": "Knots3D",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 0,
+    "steps": 50000,
+    "pixelsize": 6
+  },
+  {
+    "id": "Knots3D_full_12345",
+    "model": "Knots3D",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 12345,
+    "steps": 50000,
+    "pixelsize": 6
+  },
+  {
+    "id": "Knots3D_full_2147483647",
+    "model": "Knots3D",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 2147483647,
+    "steps": 50000,
+    "pixelsize": 6
+  },
+  {
+    "id": "Apartemazements_full_0",
+    "model": "Apartemazements",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 0,
+    "steps": 50000,
+    "pixelsize": 6
+  },
+  {
+    "id": "Apartemazements_full_12345",
+    "model": "Apartemazements",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 12345,
+    "steps": 50000,
+    "pixelsize": 6
+  },
+  {
+    "id": "Apartemazements_full_2147483647",
+    "model": "Apartemazements",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 2147483647,
+    "steps": 50000,
+    "pixelsize": 6
+  },
+  {
+    "id": "WaveFlowers_full_0",
+    "model": "WaveFlowers",
+    "mx": 30,
+    "my": 30,
+    "mz": 1,
+    "seed": 0,
+    "steps": 50000,
+    "pixelsize": 8
+  },
+  {
+    "id": "WaveFlowers_full_12345",
+    "model": "WaveFlowers",
+    "mx": 30,
+    "my": 30,
+    "mz": 1,
+    "seed": 12345,
+    "steps": 50000,
+    "pixelsize": 8
+  },
+  {
+    "id": "WaveFlowers_full_2147483647",
+    "model": "WaveFlowers",
+    "mx": 30,
+    "my": 30,
+    "mz": 1,
+    "seed": 2147483647,
+    "steps": 50000,
+    "pixelsize": 8
+  },
+  {
+    "id": "SeaVilla_full_0",
+    "model": "SeaVilla",
+    "mx": 6,
+    "my": 6,
+    "mz": 4,
+    "seed": 0,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "SeaVilla_full_12345",
+    "model": "SeaVilla",
+    "mx": 6,
+    "my": 6,
+    "mz": 4,
+    "seed": 12345,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "SeaVilla_full_2147483647",
+    "model": "SeaVilla",
+    "mx": 6,
+    "my": 6,
+    "mz": 4,
+    "seed": 2147483647,
+    "steps": 50000,
+    "pixelsize": 4
+  },
+  {
+    "id": "MazeGrowth_gui",
+    "model": "MazeGrowth",
+    "mx": 24,
+    "my": 24,
+    "mz": 1,
+    "seed": 42,
+    "steps": 100,
+    "pixelsize": 6,
+    "margin": 250
+  },
+  {
+    "id": "OddScale3D_gui",
+    "model": "OddScale3D",
+    "mx": 6,
+    "my": 6,
+    "mz": 4,
+    "seed": 42,
+    "steps": 100,
+    "pixelsize": 6,
+    "margin": 350
+  },
+  {
+    "id": "Apartemazements_gui",
+    "model": "Apartemazements",
+    "mx": 6,
+    "my": 6,
+    "mz": 3,
+    "seed": 42,
+    "steps": 100,
+    "pixelsize": 6,
+    "margin": 200
+  },
+  {
+    "id": "ValidationSearchOne",
+    "model": "ValidationSearchOne",
+    "mx": 4,
+    "my": 2,
+    "mz": 1,
+    "seed": 42,
+    "steps": 100,
+    "pixelsize": 10,
+    "fixture": true
+  },
+  {
+    "id": "ValidationSearchAll",
+    "model": "ValidationSearchAll",
+    "mx": 4,
+    "my": 2,
+    "mz": 1,
+    "seed": 42,
+    "steps": 100,
+    "pixelsize": 10,
+    "fixture": true
+  },
+  {
+    "id": "Knots3D_showcase",
+    "model": "Knots3D",
+    "mx": 8,
+    "my": 8,
+    "mz": 8,
+    "seed": 42,
+    "steps": 50000,
+    "pixelsize": 6
+  },
+  {
+    "id": "Apartemazements_showcase",
+    "model": "Apartemazements",
+    "mx": 8,
+    "my": 8,
+    "mz": 8,
+    "seed": 42,
+    "steps": 50000,
+    "pixelsize": 6
+  },
+  {
+    "id": "ModernHouse_showcase",
+    "model": "ModernHouse",
+    "mx": 9,
+    "my": 9,
+    "mz": 4,
+    "seed": 42,
+    "steps": 50000,
+    "pixelsize": 6
+  }
+]

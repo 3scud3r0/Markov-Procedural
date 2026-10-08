@@ -1,0 +1,134 @@
+{
+  "schema": "markovjunior.document/1",
+  "kind": "data",
+  "metadata": {
+    "nodes": 97,
+    "job": "entidades",
+    "generator": "data",
+    "seed": 1629339888,
+    "project_seed": 42,
+    "instance": 0
+  },
+  "value": [
+    {
+      "nome": "qixewajd",
+      "classe": "guardiao",
+      "energia": 46,
+      "ativo": true,
+      "posicao": {
+        "x": -72.734857,
+        "y": 73.990294
+      }
+    },
+    {
+      "nome": "qhgdcybr",
+      "classe": "explorador",
+      "energia": 67,
+      "ativo": false,
+      "posicao": {
+        "x": 83.311982,
+        "y": 51.89024
+      }
+    },
+    {
+      "nome": "tinkkmtw",
+      "classe": "explorador",
+      "energia": 93,
+      "ativo": true,
+      "posicao": {
+        "x": -81.255842,
+        "y": 0.177043
+      }
+    },
+    {
+      "nome": "lmezopxg",
+      "classe": "guardiao",
+      "energia": 47,
+      "ativo": true,
+      "posicao": {
+        "x": 31.145756,
+        "y": -56.351999
+      }
+    },
+    {
+      "nome": "wmymsygc",
+      "classe": "explorador",
+      "energia": 12,
+      "ativo": true,
+      "posicao": {
+        "x": -26.209172,
+        "y": -98.132767
+      }
+    },
+    {
+      "nome": "rkzojmap",
+      "classe": "artesao",
+      "energia": 59,
+      "ativo": true,
+      "posicao": {
+        "x": -66.27986,
+        "y": -82.920434
+      }
+    },
+    {
+      "nome": "ianyybte",
+      "classe": "artesao",
+      "energia": 32,
+      "ativo": false,
+      "posicao": {
+        "x": 17.216487,
+        "y": -56.411718
+      }
+    },
+    {
+      "nome": "vvkemoqo",
+      "classe": "guardiao",
+      "energia": 55,
+      "ativo": true,
+      "posicao": {
+        "x": -47.921117,
+        "y": -89.923274
+      }
+    },
+    {
+      "nome": "zqqjykiq",
+      "classe": "artesao",
+      "energia": 31,
+      "ativo": true,
+      "posicao": {
+        "x": -28.896455,
+        "y": -80.624335
+      }
+    },
+    {
+      "nome": "pqvbdazd",
+      "classe": "guardiao",
+      "energia": 27,
+      "ativo": true,
+      "posicao": {
+        "x": -32.923294,
+        "y": -83.149313
+      }
+    },
+    {
+      "nome": "zooknhrw",
+      "classe": "explorador",
+      "energia": 21,
+      "ativo": true,
+      "posicao": {
+        "x": -49.734481,
+        "y": -37.299472
+      }
+    },
+    {
+      "nome": "ohpepuuj",
+      "classe": "guardiao",
+      "energia": 10,
+      "ativo": true,
+      "posicao": {
+        "x": 73.126059,
+        "y": -27.788504
+      }
+    }
+  ]
+}

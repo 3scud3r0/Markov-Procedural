@@ -1,0 +1,96 @@
+{
+  "schema": "markovjunior.generation/1",
+  "version": 1,
+  "seed": 42,
+  "jobs": [
+    {
+      "name": "linguagem_jardim",
+      "instance": 0,
+      "generator": "grammar",
+      "kind": "text",
+      "seed": 48131597,
+      "params": {
+        "start": "<programa>",
+        "max_depth": 16,
+        "rules": {
+          "programa": [
+            "garden \"<nome>\" {\n<plantas>}\n"
+          ],
+          "nome": [
+            "Luminosa",
+            "Aurora",
+            "Jardim de Memórias"
+          ],
+          "plantas": [
+            {
+              "text": "<planta>",
+              "weight": 1
+            },
+            {
+              "text": "<planta><plantas>",
+              "weight": 4
+            }
+          ],
+          "planta": [
+            "  plant <especie> at (<int:10:950>, <int:20:550>) size <int:3:18>;\n"
+          ],
+          "especie": [
+            "oak",
+            "fern",
+            "willow",
+            "flower"
+          ]
+        }
+      },
+      "outputs": [
+        {
+          "target": "garden",
+          "path": "linguagem_jardim/linguagem_jardim.garden",
+          "media_type": "text/plain",
+          "bytes": 58,
+          "sha256": "18723e5c94c2ae68fe6fef6da02be2c4588c68df4a0e4ad9c060aeb0ca580307"
+        },
+        {
+          "target": "text",
+          "path": "linguagem_jardim/linguagem_jardim.txt",
+          "media_type": "text/plain",
+          "bytes": 59,
+          "sha256": "fc0d9b9149c241a08bc4e5d9146ade14598760f5dea16a4fd3b34044aac1b26a"
+        },
+        {
+          "target": "json",
+          "path": "linguagem_jardim/linguagem_jardim.json",
+          "media_type": "application/json",
+          "bytes": 666,
+          "sha256": "3b54bd0fd800900f639535c7c7406584c6c7319f7a0156f981e850b576cb521a"
+        }
+      ]
+    },
+    {
+      "name": "idioma",
+      "instance": 0,
+      "generator": "lexicon",
+      "kind": "data",
+      "seed": 94995979,
+      "params": {
+        "entries": 32
+      },
+      "outputs": [
+        {
+          "target": "json",
+          "path": "idioma/idioma.json",
+          "media_type": "application/json",
+          "bytes": 3017,
+          "sha256": "96fe9f1e17d6832a4d59b80a918015667f590a073f568accf64dcdd4508a95ed"
+        },
+        {
+          "target": "csv",
+          "path": "idioma/idioma.csv",
+          "media_type": "text/csv",
+          "bytes": 519,
+          "sha256": "a2983bafea6fca7acf823737ac2fb114499d75c8d270e87ce5961ef89ca3c951"
+        }
+      ]
+    }
+  ]
+}

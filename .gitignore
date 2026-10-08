@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+!bytecode_python312/
+!bytecode_python312/**/*.pyc
+.venv/
+build/
+*.egg-info/

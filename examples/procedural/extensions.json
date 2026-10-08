@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "seed": 42,
+  "jobs": [
+    {
+      "name": "linguagem_jardim",
+      "generator": "grammar",
+      "params": {
+        "start": "<programa>",
+        "max_depth": 16,
+        "rules": {
+          "programa": [
+            "garden \"<nome>\" {\n<plantas>}\n"
+          ],
+          "nome": [
+            "Luminosa",
+            "Aurora",
+            "Jardim de Memórias"
+          ],
+          "plantas": [
+            {
+              "text": "<planta>",
+              "weight": 1
+            },
+            {
+              "text": "<planta><plantas>",
+              "weight": 4
+            }
+          ],
+          "planta": [
+            "  plant <especie> at (<int:10:950>, <int:20:550>) size <int:3:18>;\n"
+          ],
+          "especie": [
+            "oak",
+            "fern",
+            "willow",
+            "flower"
+          ]
+        }
+      },
+      "targets": [
+        "garden",
+        "text",
+        "json"
+      ]
+    },
+    {
+      "name": "idioma",
+      "generator": "lexicon",
+      "params": {
+        "entries": 32
+      },
+      "targets": [
+        "json",
+        "csv"
+      ]
+    }
+  ]
+}

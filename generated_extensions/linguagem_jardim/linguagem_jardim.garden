@@ -1,0 +1,3 @@
+garden "Aurora" {
+  plant flower at (583, 183) size 18;
+}

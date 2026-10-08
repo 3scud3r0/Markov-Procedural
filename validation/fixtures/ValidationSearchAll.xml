@@ -1,0 +1,7 @@
+<sequence values="BIW">
+  <all in="B" out="I" steps="1"/>
+  <all search="True">
+    <rule in="B" out="W"/>
+    <observe value="I" from="B" to="W"/>
+  </all>
+</sequence>

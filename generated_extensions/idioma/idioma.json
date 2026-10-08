@@ -1,0 +1,174 @@
+{
+  "schema": "markovjunior.document/1",
+  "kind": "data",
+  "metadata": {
+    "language": "procedural lexicon",
+    "job": "idioma",
+    "generator": "lexicon",
+    "seed": 94995979,
+    "project_seed": 42,
+    "instance": 0
+  },
+  "value": [
+    {
+      "token": "vomo",
+      "meaning": "water",
+      "category": "noun"
+    },
+    {
+      "token": "mina",
+      "meaning": "memory",
+      "category": "noun"
+    },
+    {
+      "token": "kiva",
+      "meaning": "home",
+      "category": "noun"
+    },
+    {
+      "token": "veki",
+      "meaning": "tree",
+      "category": "noun"
+    },
+    {
+      "token": "sonu",
+      "meaning": "moon",
+      "category": "noun"
+    },
+    {
+      "token": "meni",
+      "meaning": "memory",
+      "category": "noun"
+    },
+    {
+      "token": "leli",
+      "meaning": "memory",
+      "category": "noun"
+    },
+    {
+      "token": "keta",
+      "meaning": "sun",
+      "category": "noun"
+    },
+    {
+      "token": "nate",
+      "meaning": "memory",
+      "category": "noun"
+    },
+    {
+      "token": "sapo",
+      "meaning": "water",
+      "category": "noun"
+    },
+    {
+      "token": "kipu",
+      "meaning": "water",
+      "category": "noun"
+    },
+    {
+      "token": "mene",
+      "meaning": "memory",
+      "category": "noun"
+    },
+    {
+      "token": "tave",
+      "meaning": "path",
+      "category": "noun"
+    },
+    {
+      "token": "rere",
+      "meaning": "path",
+      "category": "noun"
+    },
+    {
+      "token": "rive",
+      "meaning": "memory",
+      "category": "noun"
+    },
+    {
+      "token": "poka",
+      "meaning": "home",
+      "category": "noun"
+    },
+    {
+      "token": "lusi",
+      "meaning": "memory",
+      "category": "noun"
+    },
+    {
+      "token": "rume",
+      "meaning": "path",
+      "category": "noun"
+    },
+    {
+      "token": "tupe",
+      "meaning": "moon",
+      "category": "noun"
+    },
+    {
+      "token": "meso",
+      "meaning": "water",
+      "category": "noun"
+    },
+    {
+      "token": "nila",
+      "meaning": "sun",
+      "category": "noun"
+    },
+    {
+      "token": "roma",
+      "meaning": "path",
+      "category": "noun"
+    },
+    {
+      "token": "rami",
+      "meaning": "path",
+      "category": "noun"
+    },
+    {
+      "token": "vini",
+      "meaning": "water",
+      "category": "noun"
+    },
+    {
+      "token": "talo",
+      "meaning": "home",
+      "category": "noun"
+    },
+    {
+      "token": "saru",
+      "meaning": "moon",
+      "category": "noun"
+    },
+    {
+      "token": "manu",
+      "meaning": "sun",
+      "category": "noun"
+    },
+    {
+      "token": "sora",
+      "meaning": "tree",
+      "category": "noun"
+    },
+    {
+      "token": "viku",
+      "meaning": "light",
+      "category": "noun"
+    },
+    {
+      "token": "soto",
+      "meaning": "moon",
+      "category": "noun"
+    },
+    {
+      "token": "vumo",
+      "meaning": "sun",
+      "category": "noun"
+    },
+    {
+      "token": "mepi",
+      "meaning": "home",
+      "category": "noun"
+    }
+  ]
+}

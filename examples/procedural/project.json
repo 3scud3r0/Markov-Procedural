@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "seed": 42,
+  "jobs": [
+    {
+      "name": "calculos",
+      "generator": "program",
+      "count": 3,
+      "params": {"functions": 4, "expression_depth": 3, "iterations": 5},
+      "targets": ["python", "javascript", "typescript", "c", "cpp", "rust", "go", "lua", "sql", "json"]
+    },
+    {
+      "name": "jardim",
+      "generator": "scene",
+      "params": {"width": 1200, "height": 700, "trees": 9, "depth": 6},
+      "targets": ["svg", "json"]
+    },
+    {
+      "name": "labirinto",
+      "generator": "grid",
+      "params": {"model": "MazeGrowth", "width": 31, "height": 31, "cell_size": 14},
+      "targets": ["svg", "json"]
+    },
+    {
+      "name": "narrativa",
+      "generator": "grammar",
+      "params": {
+        "start": "<historia>",
+        "max_depth": 12,
+        "rules": {
+          "historia": ["<personagem> chegou a <lugar>. <evento> <final>"],
+          "personagem": ["Uma cartógrafa", "Um jardineiro de estrelas", "Uma exploradora de ruínas"],
+          "lugar": ["uma cidade suspensa", "um bosque de vidro", "uma estação abandonada"],
+          "evento": [
+            {"text": "Encontrou <objeto> e decidiu <acao>.", "weight": 3},
+            {"text": "Ouviu um chamado. <evento>", "weight": 1}
+          ],
+          "objeto": ["uma chave que sonhava", "um mapa ainda em branco", "uma semente luminosa"],
+          "acao": ["abrir um caminho", "plantar uma memória", "seguir as constelações"],
+          "final": ["O mundo ganhou um novo nome.", "A viagem estava apenas começando."]
+        }
+      },
+      "targets": ["text", "markdown", "json"]
+    },
+    {
+      "name": "linguagem_jardim",
+      "generator": "grammar",
+      "params": {
+        "start": "<programa>",
+        "max_depth": 16,
+        "rules": {
+          "programa": ["garden \"<nome>\" {\n<plantas>}\n"],
+          "nome": ["Luminosa", "Aurora", "Jardim de Memórias"],
+          "plantas": [
+            {"text": "<planta>", "weight": 1},
+            {"text": "<planta><plantas>", "weight": 4}
+          ],
+          "planta": ["  plant <especie> at (<int:10:950>, <int:20:550>) size <int:3:18>;\n"],
+          "especie": ["oak", "fern", "willow", "flower"]
+        }
+      },
+      "targets": ["text", "json"]
+    },
+    {
+      "name": "entidades",
+      "generator": "data",
+      "params": {
+        "schema": {
+          "type": "array", "length": 12,
+          "items": {
+            "type": "object",
+            "properties": {
+              "nome": {"type": "string", "length": 8},
+              "classe": {"type": "string", "choices": ["explorador", "artesao", "guardiao"]},
+              "energia": {"type": "integer", "min": 10, "max": 100},
+              "ativo": {"type": "boolean", "probability": 0.8},
+              "posicao": {
+                "type": "object",
+                "properties": {
+                  "x": {"type": "number", "min": -100, "max": 100},
+                  "y": {"type": "number", "min": -100, "max": 100}
+                }
+              }
+            }
+          }
+        }
+      },
+      "targets": ["json"]
+    }
+  ]
+}

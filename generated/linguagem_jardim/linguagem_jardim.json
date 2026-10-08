@@ -1,0 +1,35 @@
+{
+  "schema": "markovjunior.document/1",
+  "kind": "text",
+  "metadata": {
+    "expansions": 5,
+    "trace": [
+      {
+        "rule": "programa",
+        "alternative": 0
+      },
+      {
+        "rule": "nome",
+        "alternative": 1
+      },
+      {
+        "rule": "plantas",
+        "alternative": 0
+      },
+      {
+        "rule": "planta",
+        "alternative": 0
+      },
+      {
+        "rule": "especie",
+        "alternative": 3
+      }
+    ],
+    "job": "linguagem_jardim",
+    "generator": "grammar",
+    "seed": 48131597,
+    "project_seed": 42,
+    "instance": 0
+  },
+  "value": "garden \"Aurora\" {\n  plant flower at (583, 183) size 18;\n}\n"
+}
