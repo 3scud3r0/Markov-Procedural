@@ -1,0 +1,58 @@
+{
+  "schema": "markov.studio-validation/1",
+  "version": "1.0.0",
+  "python_tests": 31,
+  "native_backend_checks_preserved": 2673,
+  "wheel_clean_install": "pass",
+  "legacy_engine_source_sha256_equal": {
+    "core": "8bd3cd0d387b270f8d6a0142578ba35faf60252721ff518b5cc205adc860841b",
+    "rules": "3be3587ea1d7270aa8fabad234ba466c02bf8abb3e0eb7753601e3a9812e4531",
+    "operations": "c2c259396c8c8c37f2f11e04a717e537cfadf309bebb340f94acfa3a3b39f10a",
+    "wfc": "2751ace9d52c9af6bfd55d473f570a95d7843ab8dd70960c70bfaf967ab60546",
+    "graphics": "66bc07e566220f9741b9cd90bdf5ea5b30d848a87e64b2aa09d993b9f0fe9f1b",
+    "gui": "ac9bf8242acca2643e12c1f47915aa6649af9a5fc5ba894c2c28d75c8fdc76cb",
+    "search": "eaf5be4905b4c7323a836a3b665b72dbc1c2f578c21b40aa6f7ccbf88d34308f"
+  },
+  "browsers": [
+    {
+      "ok": true,
+      "url": "http://127.0.0.1:8765/",
+      "renderer": "CPU",
+      "checks": [
+        "real Python multifile startup and CPU rendering without WebGL",
+        "user-written classes, comprehensions, data, stdout and geometry",
+        "code-declared parameter control reruns the program",
+        "syntax error with source line and editor diagnostic",
+        "runtime error with line and partial stdout",
+        "editable project modules and all nine IR backend outputs",
+        "persistent callback animation and pause",
+        "terminate a running worker, preserve source and execute again",
+        "inspector writes scene transforms",
+        "project JSON saves/reopens code, parameters and edited scene",
+        "browser persistence after reload",
+        "shareable source project URL",
+        "mobile layout without horizontal overflow"
+      ]
+    },
+    {
+      "ok": true,
+      "url": "http://127.0.0.1:8765/",
+      "renderer": "WebGL",
+      "checks": [
+        "real Python multifile startup and Babylon WebGL rendering",
+        "user-written classes, comprehensions, data, stdout and geometry",
+        "code-declared parameter control reruns the program",
+        "syntax error with source line and editor diagnostic",
+        "runtime error with line and partial stdout",
+        "editable project modules and all nine IR backend outputs",
+        "persistent callback animation and pause",
+        "terminate a running worker, preserve source and execute again",
+        "inspector writes scene transforms",
+        "project JSON saves/reopens code, parameters and edited scene",
+        "browser persistence after reload",
+        "shareable source project URL",
+        "mobile layout without horizontal overflow"
+      ]
+    }
+  ]
+}

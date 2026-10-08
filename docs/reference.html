@@ -1,0 +1,48 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Referência da linguagem — Markov 1.0</title><link rel="icon" href="icon.svg"><link rel="stylesheet" href="studio.css?v=1.0.0"><style>body{overflow:auto;height:auto}.docs-layout{display:grid;grid-template-columns:210px minmax(0,850px);gap:55px;max-width:1250px;margin:0 auto;padding:55px 35px}.docs-nav{position:sticky;top:25px;align-self:start;display:flex;flex-direction:column;gap:15px;font-size:12px}.docs-nav strong{font:10px var(--mono);letter-spacing:2px;color:var(--accent);margin-bottom:12px}.docs-content h1{font:500 45px 'Space Grotesk';letter-spacing:-2px;margin:0 0 20px;color:#e2ebd8}.docs-content h2{font:500 25px 'Space Grotesk';color:#d4e0c8;margin:45px 0 17px}.docs-content h3{font-size:15px;color:#c3d2ce;margin-top:28px}.docs-content p,.docs-content li{font-size:14px;line-height:1.85;color:#93a9b7}.docs-content pre{padding:22px;background:#141c24;border:1px solid #293744;border-radius:8px;font:12px/1.9 var(--mono);overflow:auto;color:#c1d0c1}.docs-content table{border-collapse:collapse;width:100%;font-size:12px;line-height:1.8}.docs-content td,.docs-content th{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid #293744}.docs-content th{color:#c0d399}.docs-content td{color:#9fb2c0}.doc-callout{padding:18px 24px;background:#1c2720;border-left:2px solid #a5bc82;border-radius:0 5px 5px 0;font-size:13px;line-height:1.9;color:#c2d3b0}.docs-content .lead{font-size:18px;color:#a9bec6}.docs-content a{color:var(--accent)}@media(max-width:750px){.docs-layout{grid-template-columns:1fr;padding:35px 22px;gap:25px}.docs-nav{position:static;flex-direction:row;flex-wrap:wrap}.docs-nav strong{width:100%}.docs-content h1{font-size:35px}.docs-content table{font-size:10px}.app-header nav{display:none}}</style></head><body><header class="app-header"><a class="brand" href="./"><svg class="brand-mark" viewBox="0 0 32 32"><path d="M3 25V7h6l7 10 7-10h6v18h-6V16l-7 10-7-10v9z"/></svg><span>markov / studio</span><span class="version">1.0</span></a><nav class="primary-nav"><a href="./">← Voltar ao editor</a><a href="https://github.com/3scud3r0/Markov-Procedural/blob/main/LANGUAGE_SPEC.md">Especificação completa ↗</a></nav></header><main class="docs-layout"><nav class="docs-nav"><strong>REFERÊNCIA / 1.0</strong><a href="#language">A linguagem</a><a href="#start">Primeiro programa</a><a href="#random">Aleatoriedade</a><a href="#geometry">Geometria e cena</a><a href="#rules">Regras e parâmetros</a><a href="#animation">Animação e interação</a><a href="#files">Dados e arquivos</a><a href="#modules">Módulos</a><a href="#limits">Limites do ambiente</a></nav><article class="docs-content"><span class="eyebrow">UMA LINGUAGEM PARA CRIAR PELAS REGRAS</span><h1 id="language">Seu código define<br>o que pode existir.</h1><p class="lead">Markov usa a sintaxe de Python e acrescenta operações procedurais para geometria, regras, ruído, textos, dados e animação.</p><p>Escreva funções, classes, algoritmos, condições e laços. O Studio compila e executa o programa em Python real dentro de um Worker. Você não precisa escolher um gerador pronto nem escrever uma receita JSON.</p><div class="doc-callout">A programação é de propósito geral dentro do runtime Python disponível. O navegador não oferece acesso irrestrito ao sistema operacional ou compiladores nativos C/C++/Rust. Os exportadores existentes continuam tendo seu próprio subconjunto de IR.</div><h2 id="start">01 / Primeiro programa</h2><pre>count = param("count", 8, min=1, max=30)
+
+for i in range(count):
+    sphere(radius=0.3,
+           position=[i - count / 2, 1, 0],
+           color="#d6ec9f")
+
+print(f"Criei {count} objetos.")
+emit("data.json", {"count": count})</pre><p><b>Ctrl + Enter</b> executa. <b>Parar</b> termina o Worker sem descartar o código. O console mostra stdout e os erros com arquivo e linha. Para um programa sem geometria, use o console e a aba Saídas.</p><h2 id="random">02 / Aleatoriedade determinística</h2><table><tr><th>Comando</th><th>Resultado</th></tr><tr><td><code>seed(42)</code> / <code>seed()</code></td><td>Define / consulta a semente do RNG procedural.</td></tr><tr><td><code>random(minimum=0, maximum=1)</code></td><td>Float no intervalo. Use argumentos posicionais ou <code>minimum</code>/<code>maximum</code>.</td></tr><tr><td><code>randint(1, 10)</code></td><td>Inteiro incluindo os limites.</td></tr><tr><td><code>choose(values, weights=None)</code></td><td>Escolha uniforme ou ponderada.</td></tr><tr><td><code>noise(x, y=0, z=0)</code></td><td>Ruído contínuo determinístico em [0,1].</td></tr></table><p>Mesma semente, mesmos parâmetros e as mesmas chamadas das APIs produzem o mesmo documento. Tempo real, rede e RNGs de outras bibliotecas podem mudar essa propriedade.</p><h2 id="geometry">03 / Geometria é programável</h2><table><tr><th>Construtor</th><th>Geometria</th></tr><tr><td><code>sphere(radius=1)</code></td><td>Esfera.</td></tr><tr><td><code>box(size=[1,1,1])</code></td><td>Paralelepípedo.</td></tr><tr><td><code>cylinder(radius=.5, height=2)</code></td><td>Cilindro.</td></tr><tr><td><code>cone(radius=1, height=2)</code></td><td>Cone.</td></tr><tr><td><code>torus(radius=1, thickness=.2)</code></td><td>Toro em torno do eixo Y.</td></tr><tr><td><code>plane(width=2, depth=2)</code></td><td>Plano no eixo XZ.</td></tr><tr><td><code>line(points, width=.05)</code></td><td>Trajeto em 3D.</td></tr><tr><td><code>mesh(vertices, faces)</code></td><td>Malha própria, com faces triangulares.</td></tr></table><p>Todos aceitam <code>name</code>, <code>position</code>, <code>rotation</code> em radianos, <code>scale</code> e <code>color</code> hexadecimal. Retornam um objeto que pode ser alterado pelo programa.</p><pre>node = sphere(radius=0.5, position=[0, 1, 0])
+node.translate(x=2).rotate(y=0.5).resize(1.5)
+node.color = "#e8a16f"
+node.position[1] = 3
+
+scene.background = "#10141d"
+scene.ground = True
+scene.camera = {"target": [0, 2, 0], "radius": 20}</pre><p>O Studio usa Babylon.js quando há WebGL. Sem WebGL, a mesma cena é projetada com Canvas 2D na CPU, com iluminação simplificada. Seleção e transformações continuam funcionando.</p><h2 id="rules">04 / Regras e parâmetros</h2><pre>@rule
+def ring(count, radius):
+    for i in range(count):
+        angle = i * TAU / count
+        sphere(radius=0.2,
+               position=[cos(angle)*radius, 1,
+                         sin(angle)*radius])
+
+count = param("count", 16, min=4, max=50, step=1)
+ring(count, 4)</pre><p><code>@rule</code> marca uma função reutilizável. <code>param()</code> declara controles no inspector e retorna seus valores. Não substituem funções e variáveis Python: fazem parte delas.</p><h2 id="animation">05 / Estado, animação e teclado</h2><pre>player = sphere(position=[0, 1, 0])
+
+def update(t, dt):
+    if "ArrowRight" in keys:
+        player.position[0] += dt * 3
+    player.position[1] = 1 + sin(t) * 0.25</pre><p>Clique em <b>Iniciar animação</b> e dê foco à cena para usar o teclado. O callback preserva o estado entre frames; <code>t</code> e <code>dt</code> estão em segundos. <code>keys</code> contém as teclas pressionadas; <code>mouse</code> contém coordenadas da área de visualização e o estado de clique.</p><h2 id="files">06 / Texto, dados e saídas</h2><pre>import json
+from collections import Counter
+
+frequencies = dict(Counter("procedural"))
+print(frequencies)
+emit("frequencies.json", frequencies)
+emit("hello.txt", "Olá, mundo procedural!")
+
+text = grammar({"start": ["Um mundo novo", "Uma nova regra"]})
+emit("story.txt", text)</pre><p><code>emit()</code> aceita texto, objetos serializáveis e bytes. Arquivos escritos com <code>open()</code> no diretório virtual também são coletados ao fim da execução inicial. Escolha a saída na aba Saídas para ler e baixar.</p><pre># Gerar fontes usando a IR numérica existente:
+generate("program", {"functions": 4},
+         targets=["python", "c", "cpp", "rust", "sql"])</pre><p>Este último comando exporta um programa da IR numérica. Não converte qualquer programa Python para todos os destinos e não executa compiladores nativos no Pages.</p><h2 id="modules">07 / Organize seu próprio projeto</h2><p>Crie <code>helpers.mp</code> no explorador. Ele pode conter funções e classes e acessar as mesmas APIs. Importe pelo nome do módulo:</p><pre># helpers.mp
+@rule
+def create_point(x):
+    return sphere(position=[x, 1, 0])
+
+# main.mp
+from helpers import create_point
+create_point(2)</pre><p>Salvar projeto baixa um JSON com código, parâmetros e edições da cena. Abrir restaura esse estado. O navegador guarda o último projeto e projetos recentes localmente. Compartilhar cria um link com o código; o destinatário decide quando executar.</p><h2 id="limits">08 / Um contrato claro</h2><p>Projetos: 50 arquivos, até 2 MB de fontes no total. Cenas: 5.000 objetos, com orçamento adicional para malhas. Console: 100.000 caracteres. A execução inicial tem orçamento cooperativo de 8 segundos; o Studio encerra Workers que ultrapassam 20 segundos. É possível parar manualmente a qualquer momento durante a execução.</p><p>O filesystem é virtual no navegador. Imports dependem dos pacotes disponíveis no Pyodide. <code>input()</code> não oferece um terminal interativo; use parâmetros e eventos. O CLI executa com permissões locais e deve receber código confiável.</p><p>Leia a <a href="https://github.com/3scud3r0/Markov-Procedural/blob/main/LANGUAGE_SPEC.md">especificação completa da 1.0</a> para formatos, limites e critérios de aceite. Funcionalidades futuras, como glTF, colaboração e ferramentas de parser genérico, não são apresentadas como disponíveis.</p></article></main></body></html>

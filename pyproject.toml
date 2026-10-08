@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "markovjunior-procedural"
-version = "0.2.0"
-description = "Seeded procedural programs, custom grammars, data and scenes, based on MarkovJunior"
+version = "1.0.0"
+description = "Markov procedural language and Studio: Python-compatible programming, geometry, animation, data and code generation"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {file = "LICENSE"}

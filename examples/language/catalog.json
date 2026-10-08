@@ -1,0 +1,9 @@
+[
+  {"id":"orbits","title":"Órbitas de matéria","category":"Animação · 3D","description":"Funções em dois arquivos, órbitas e callbacks de animação.","accent":"#cddd9c"},
+  {"id":"terrain","title":"Topografia contínua","category":"Geometria · noise","description":"Crie uma malha própria a partir de ruído contínuo determinístico.","accent":"#a0bca4"},
+  {"id":"architecture","title":"Pavilhão paramétrico","category":"Arquitetura · regras","description":"Transforme uma função reutilizável em arquitetura generativa.","accent":"#dec6a0"},
+  {"id":"algorithm","title":"Além da cena","category":"Algoritmos · dados","description":"Classes, imports, sequências, estruturas de dados e arquivos.","accent":"#b2b8dc"},
+  {"id":"game","title":"Movimento interativo","category":"Interação · teclado","description":"Programe callbacks e mova um personagem com WASD ou setas.","accent":"#d7ad95"},
+  {"id":"grammar","title":"Linguagens dentro da linguagem","category":"Gramáticas · texto","description":"Produza narrativas e programas de uma linguagem declarativa.","accent":"#b9c9d5"},
+  {"id":"backends","title":"Nove destinos","category":"Código · exportadores","description":"Gere funções equivalentes usando a representação numérica comum.","accent":"#d5c696"}
+]

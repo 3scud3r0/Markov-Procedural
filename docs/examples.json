@@ -1,0 +1,97 @@
+[
+  {
+    "id": "orbits",
+    "title": "Órbitas de matéria",
+    "category": "Animação · 3D",
+    "description": "Funções em dois arquivos, órbitas e callbacks de animação.",
+    "accent": "#cddd9c",
+    "files": [
+      {
+        "name": "main.mp",
+        "content": "from shapes import orbit\n\n# Modifique o código. Os parâmetros viram controles no Studio.\ncount = param(\"particles\", 36, min=8, max=120, step=1)\nradius = param(\"radius\", 5.0, min=2, max=9, step=0.25)\nspeed = param(\"speed\", 0.25, min=0, max=2, step=0.05)\n\nscene.background = \"#10141d\"\nscene.ground_color = \"#1b2329\"\nscene.camera = {\"target\": [0, 2.5, 0], \"radius\": 19}\n\ncore = sphere(radius=1.1, position=[0, 2.5, 0],\n              color=\"#e6edcc\", name=\"Núcleo\")\nrings = []\nfor i in range(3):\n    ring = torus(radius=radius * (0.6 + i * 0.17),\n                 thickness=0.06, position=[0, 2.5, 0],\n                 rotation=[0.25 + i * 0.55, 0, i * 0.7],\n                 color=choose([\"#a9c7b3\", \"#e8a16f\", \"#d4d6aa\"]),\n                 name=f\"Órbita {i + 1}\")\n    rings.append(ring)\n\nparticles = orbit(count, radius)\nprint(f\"Markov 1.0 · {len(scene.objects)} objetos gerados\")\nprint(\"Altere a função orbit em shapes.mp ou crie a sua própria.\")\nemit(\"composition.json\", {\"seed\": seed(), \"particles\": count,\n                          \"radius\": radius})\n\ndef update(t, dt):\n    for i, ring in enumerate(rings):\n        ring.rotate(y=dt * speed * (i + 1))\n    core.resize(1 + sin(t * 1.5) * 0.05)\n"
+      },
+      {
+        "name": "shapes.mp",
+        "content": "@rule\ndef orbit(count, radius):\n    \"\"\"Uma regra é uma função reutilizável, não um bloco fixo.\"\"\"\n    palette = [\"#d5e99b\", \"#e8a16f\", \"#9fbcaf\", \"#e9d3aa\"]\n    objects = []\n    for i in range(count):\n        angle = i * TAU / count\n        distance = radius + random(-0.3, 0.8)\n        height = 2.5 + sin(angle * 3) * 1.7\n        node = sphere(radius=random(0.09, 0.28),\n                      position=[cos(angle) * distance, height,\n                                sin(angle) * distance],\n                      color=choose(palette), name=f\"Partícula {i}\")\n        objects.append(node)\n    return objects\n"
+      }
+    ]
+  },
+  {
+    "id": "terrain",
+    "title": "Topografia contínua",
+    "category": "Geometria · noise",
+    "description": "Crie uma malha própria a partir de ruído contínuo determinístico.",
+    "accent": "#a0bca4",
+    "files": [
+      {
+        "name": "main.mp",
+        "content": "resolution = param(\"resolution\", 24, min=8, max=45, step=1)\nheight = param(\"height\", 4.0, min=0.2, max=8, step=0.2)\n\nvertices = []\nfaces = []\nfor z in range(resolution):\n    for x in range(resolution):\n        y = noise(x * 0.12, z * 0.12) * height\n        y += noise(x * 0.35, z * 0.35) * height * 0.15\n        vertices.append([x - resolution / 2, y, z - resolution / 2])\n\nfor z in range(resolution - 1):\n    for x in range(resolution - 1):\n        a = z * resolution + x\n        faces.extend([[a, a + resolution, a + 1],\n                      [a + 1, a + resolution, a + resolution + 1]])\n\nmesh(vertices, faces, color=\"#9db593\", name=\"Terreno\")\nscene.ground = False\nscene.camera = {\"radius\": resolution * 1.4, \"target\": [0, 1, 0]}\nprint(f\"Malha própria: {len(vertices)} vértices, {len(faces)} triângulos\")\nemit(\"terrain.json\", {\"vertices\": vertices, \"faces\": faces})\n"
+      }
+    ]
+  },
+  {
+    "id": "architecture",
+    "title": "Pavilhão paramétrico",
+    "category": "Arquitetura · regras",
+    "description": "Transforme uma função reutilizável em arquitetura generativa.",
+    "accent": "#dec6a0",
+    "files": [
+      {
+        "name": "main.mp",
+        "content": "columns = param(\"columns\", 12, min=4, max=30, step=1)\nheight = param(\"height\", 4.0, min=2, max=8, step=0.25)\nradius = param(\"radius\", 5.0, min=2, max=9, step=0.25)\n\n@rule\ndef pavilion(count, radius, height):\n    for i in range(count):\n        angle = i * TAU / count\n        x, z = cos(angle) * radius, sin(angle) * radius\n        cylinder(radius=0.16, height=height,\n                 position=[x, height / 2, z], color=\"#d5c5aa\",\n                 name=f\"Coluna {i + 1}\")\n    torus(radius=radius, thickness=0.35,\n          position=[0, height, 0], color=\"#a5bea6\", name=\"Cobertura\")\n    cylinder(radius=radius + 0.7, height=0.2,\n             position=[0, 0.1, 0], color=\"#777c70\", name=\"Base\")\n\npavilion(columns, radius, height)\nscene.camera = {\"target\": [0, height / 2, 0], \"radius\": radius * 4}\nprint(f\"Pavilhão: {columns} colunas, altura {height}\")\n"
+      }
+    ]
+  },
+  {
+    "id": "algorithm",
+    "title": "Além da cena",
+    "category": "Algoritmos · dados",
+    "description": "Classes, imports, sequências, estruturas de dados e arquivos.",
+    "accent": "#b2b8dc",
+    "files": [
+      {
+        "name": "main.mp",
+        "content": "# Não precisa gerar uma cena. É programação de propósito geral.\nimport json\nfrom collections import Counter\n\nclass Sequence:\n    def __init__(self, size):\n        self.size = size\n\n    def fibonacci(self):\n        a, b = 0, 1\n        result = []\n        for _ in range(self.size):\n            result.append(a)\n            a, b = b, a + b\n        return result\n\nlength = param(\"length\", 20, min=2, max=80, step=1)\nvalues = Sequence(length).fibonacci()\nfrequencies = dict(Counter(str(value)[-1] for value in values))\nprint(\"Fibonacci:\", values)\nprint(\"Frequência do último dígito:\", frequencies)\nemit(\"fibonacci.json\", {\"values\": values, \"frequencies\": frequencies})\nemit(\"fibonacci.csv\", \"index,value\\n\" + \"\\n\".join(\n    f\"{index},{value}\" for index, value in enumerate(values)))\n"
+      }
+    ]
+  },
+  {
+    "id": "game",
+    "title": "Movimento interativo",
+    "category": "Interação · teclado",
+    "description": "Programe callbacks e mova um personagem com WASD ou setas.",
+    "accent": "#d7ad95",
+    "files": [
+      {
+        "name": "main.mp",
+        "content": "player = sphere(radius=0.5, position=[0, 0.5, 0],\n                color=\"#d5e99b\", name=\"Jogador\")\nspeed = param(\"speed\", 4.0, min=1, max=10, step=0.5)\nfor i in range(12):\n    cone(radius=0.3, height=0.9,\n         position=[random(-7, 7), 0.45, random(-7, 7)],\n         color=\"#e8a16f\", name=f\"Marco {i}\")\nprint(\"Clique na cena e mova com as setas ou WASD.\")\n\ndef update(t, dt):\n    dx = int(\"ArrowRight\" in keys or \"d\" in keys)\n    dx -= int(\"ArrowLeft\" in keys or \"a\" in keys)\n    dz = int(\"ArrowDown\" in keys or \"s\" in keys)\n    dz -= int(\"ArrowUp\" in keys or \"w\" in keys)\n    player.translate(x=dx * speed * dt, z=dz * speed * dt)\n"
+      }
+    ]
+  },
+  {
+    "id": "grammar",
+    "title": "Linguagens dentro da linguagem",
+    "category": "Gramáticas · texto",
+    "description": "Produza narrativas e programas de uma linguagem declarativa.",
+    "accent": "#b9c9d5",
+    "files": [
+      {
+        "name": "main.mp",
+        "content": "rules = {\n    \"start\": [\"<subject> <action> <place>.\"],\n    \"subject\": [\"Um viajante\", \"Uma máquina\", \"Um jardim\"],\n    \"action\": [\"revela\", \"transforma\", \"imagina\"],\n    \"place\": [\"a cidade suspensa\", \"um mundo novo\", \"a próxima linguagem\"],\n}\n\nsentences = [grammar(rules) for _ in range(8)]\nfor sentence in sentences:\n    print(sentence)\nemit(\"narrative.txt\", \"\\n\".join(sentences))\n\nlanguage = {\n    \"start\": [\"plant <kind> at <int:0:100>,<int:0:100>;\"],\n    \"kind\": [\"oak\", \"fern\", \"willow\"],\n}\nemit(\"example.garden\", \"\\n\".join(grammar(language) for _ in range(6)))\n"
+      }
+    ]
+  },
+  {
+    "id": "backends",
+    "title": "Nove destinos",
+    "category": "Código · exportadores",
+    "description": "Gere funções equivalentes usando a representação numérica comum.",
+    "accent": "#d5c696",
+    "files": [
+      {
+        "name": "main.mp",
+        "content": "# O exportador comum é para a IR numérica, não um transpiler de Python inteiro.\ntargets = [\"python\", \"javascript\", \"typescript\", \"c\", \"cpp\",\n           \"rust\", \"go\", \"lua\", \"sql\", \"json\"]\n\nprogram = generate(\"program\", {\"functions\": 4, \"iterations\": 5},\n                   targets=targets, name=\"calculos\")\nprint(\"Arquivos gerados:\", \", \".join(targets))\nprint(\"Use a aba Saídas para ler e baixar os fontes.\")\n"
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {"build": "esbuild editor.js --bundle --minify --target=es2020 --outfile=../docs/vendor/editor.js"},
+  "dependencies": {
+    "codemirror": "6.0.2",
+    "@codemirror/lang-python": "6.2.1",
+    "@codemirror/autocomplete": "6.20.0",
+    "@codemirror/lint": "6.9.2",
+    "@codemirror/commands": "6.10.2",
+    "esbuild": "0.27.0"
+  }
+}

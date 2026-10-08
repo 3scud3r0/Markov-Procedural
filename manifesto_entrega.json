@@ -1,9 +1,9 @@
 {
   "schema": "markovjunior.release/1",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "upstream_commit": "42aaf24bcf54ae164fba49c0a59348297904a676",
   "validation": {
-    "integration_tests": 13,
+    "integration_tests": 31,
     "backend_checks": 2673,
     "backends": {
       "python": "pass",
@@ -23,7 +23,65 @@
       "fail": 0,
       "missing": 2
     },
-    "upstream_snapshot_files_verified": 475
+    "upstream_snapshot_files_verified": 475,
+    "studio": {
+      "schema": "markov.studio-validation/1",
+      "version": "1.0.0",
+      "python_tests": 31,
+      "native_backend_checks_preserved": 2673,
+      "wheel_clean_install": "pass",
+      "legacy_engine_source_sha256_equal": {
+        "core": "8bd3cd0d387b270f8d6a0142578ba35faf60252721ff518b5cc205adc860841b",
+        "rules": "3be3587ea1d7270aa8fabad234ba466c02bf8abb3e0eb7753601e3a9812e4531",
+        "operations": "c2c259396c8c8c37f2f11e04a717e537cfadf309bebb340f94acfa3a3b39f10a",
+        "wfc": "2751ace9d52c9af6bfd55d473f570a95d7843ab8dd70960c70bfaf967ab60546",
+        "graphics": "66bc07e566220f9741b9cd90bdf5ea5b30d848a87e64b2aa09d993b9f0fe9f1b",
+        "gui": "ac9bf8242acca2643e12c1f47915aa6649af9a5fc5ba894c2c28d75c8fdc76cb",
+        "search": "eaf5be4905b4c7323a836a3b665b72dbc1c2f578c21b40aa6f7ccbf88d34308f"
+      },
+      "browsers": [
+        {
+          "ok": true,
+          "url": "http://127.0.0.1:8765/",
+          "renderer": "CPU",
+          "checks": [
+            "real Python multifile startup and CPU rendering without WebGL",
+            "user-written classes, comprehensions, data, stdout and geometry",
+            "code-declared parameter control reruns the program",
+            "syntax error with source line and editor diagnostic",
+            "runtime error with line and partial stdout",
+            "editable project modules and all nine IR backend outputs",
+            "persistent callback animation and pause",
+            "terminate a running worker, preserve source and execute again",
+            "inspector writes scene transforms",
+            "project JSON saves/reopens code, parameters and edited scene",
+            "browser persistence after reload",
+            "shareable source project URL",
+            "mobile layout without horizontal overflow"
+          ]
+        },
+        {
+          "ok": true,
+          "url": "http://127.0.0.1:8765/",
+          "renderer": "WebGL",
+          "checks": [
+            "real Python multifile startup and Babylon WebGL rendering",
+            "user-written classes, comprehensions, data, stdout and geometry",
+            "code-declared parameter control reruns the program",
+            "syntax error with source line and editor diagnostic",
+            "runtime error with line and partial stdout",
+            "editable project modules and all nine IR backend outputs",
+            "persistent callback animation and pause",
+            "terminate a running worker, preserve source and execute again",
+            "inspector writes scene transforms",
+            "project JSON saves/reopens code, parameters and edited scene",
+            "browser persistence after reload",
+            "shareable source project URL",
+            "mobile layout without horizontal overflow"
+          ]
+        }
+      ]
+    }
   },
   "files": [
     {
@@ -33,8 +91,18 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 99,
-      "sha256": "237c266fdf09a08590dec6c7e11c1617ef13da7902e27fff977bcc27358099fa"
+      "bytes": 113,
+      "sha256": "0f4ef545f925f15159cadb41798b56e8b0c0ffccda999fdda9dd0b3382f7715f"
+    },
+    {
+      "path": "GENERATOR_GUIDE.md",
+      "bytes": 11940,
+      "sha256": "05ad4a3961c7f0d7084ed51cb50fa8a0f593f69cdc6ff5489373ea9e03222b12"
+    },
+    {
+      "path": "LANGUAGE_SPEC.md",
+      "bytes": 9036,
+      "sha256": "82b286db58cb2f14a23b21f8f4c88bf8800df6357eba5b7b7d71166335695aa2"
     },
     {
       "path": "LICENSE",
@@ -48,13 +116,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 11940,
-      "sha256": "05ad4a3961c7f0d7084ed51cb50fa8a0f593f69cdc6ff5489373ea9e03222b12"
+      "bytes": 5996,
+      "sha256": "f8ea6af5ad6396ab66ab422fa958c7de734414d8d2a4823b421f614015cf0f88"
     },
     {
       "path": "ROADMAP.md",
-      "bytes": 3700,
-      "sha256": "a1c9d3b3a13523f17cac4facfd62d9479d275e918aba45596064d56e8d799ec3"
+      "bytes": 2809,
+      "sha256": "66094a1b82f7614e727701219c74ababff2275bd1fb50006fa8dd053ddad2ab7"
     },
     {
       "path": "SYNTAX_ORIGINAL.md",
@@ -62,99 +130,114 @@
       "sha256": "72931ff26db23201d3fbd61f056bebc01349290d9ab9004756cb86dd26ca1a62"
     },
     {
+      "path": "THIRD_PARTY.md",
+      "bytes": 848,
+      "sha256": "f38ebb0858dad199253a4a0087b91c18f30b4bd8891433e50c30447fb89a8997"
+    },
+    {
       "path": "bytecode_python312/markovjunior/__init__.pyc",
       "bytes": 301,
-      "sha256": "ebbea1a3dcf626d56fee4d0ad953e408dbfe8a5d1901087a9b5cc9bac537fed6"
+      "sha256": "9ac8785b6a0f8b3a0e1b18af19c949279e5f512e378f89a52aec18a735fe4abd"
     },
     {
       "path": "bytecode_python312/markovjunior/__main__.pyc",
-      "bytes": 175,
-      "sha256": "513e6c97cf5a08db80d55320682953fced1775bd8a9a66525876c9fa110af44b"
+      "bytes": 204,
+      "sha256": "fc1f8706c421697d7d1ee4c64842f08e7ef3ff09c5cdf096875dff16700c2630"
     },
     {
       "path": "bytecode_python312/markovjunior/cli.pyc",
-      "bytes": 7330,
-      "sha256": "fe7df307d994ba147403ea64ff375382b38e20fa095d6a5c3d5ae1ce8e3bdb15"
+      "bytes": 7449,
+      "sha256": "040af5dbcaccac0c2c4dbdd7ac41ca2703c6f904b4c704d0a2f17ff3571542f4"
     },
     {
       "path": "bytecode_python312/markovjunior/core.pyc",
       "bytes": 27365,
-      "sha256": "97af68a52aa9dae296f770bf1432e45bd5e01aab803321ddaa8f07ccfadb6846"
+      "sha256": "59894f83f7a3778dd6c67b40efebf24772ca434c046d5981520fe121f4dc598d"
     },
     {
       "path": "bytecode_python312/markovjunior/graphics.pyc",
       "bytes": 13250,
-      "sha256": "2d9f00b6a38f53460d77af1cee2c9988d3133d863015a245f97825f22aa85f7e"
+      "sha256": "42014b64fee6e84ca4247ac732f47ce9f19a5c8551193ad6857d305e5d3be6d6"
     },
     {
       "path": "bytecode_python312/markovjunior/gui.pyc",
       "bytes": 15200,
-      "sha256": "b44d4441b9521e319caaa5997509685bb1ad527b104cb6b44066d3e0e7749493"
+      "sha256": "63bf2b14972051df8760bdb5fd7487f9b6ee94db6697cd85f8e1b165612b3f8c"
+    },
+    {
+      "path": "bytecode_python312/markovjunior/language.pyc",
+      "bytes": 44564,
+      "sha256": "ae3507015b76e15609b85631bfa4a5323e37ebc652af795c5b66520b7a39f535"
     },
     {
       "path": "bytecode_python312/markovjunior/operations.pyc",
       "bytes": 22488,
-      "sha256": "8eaa730b8bb58e035a2123f740993477ef9ea67cf8b4fa3683c3ab51d14bf26a"
+      "sha256": "0038e5cb20d1cb906ced09323d3e4f0529c35bfa339821b4995097e2eeb9b00e"
     },
     {
       "path": "bytecode_python312/markovjunior/paths.pyc",
       "bytes": 832,
-      "sha256": "64f4ecda769404ade2d2202de971421746caab6c3f7f519cc474952e639359ae"
+      "sha256": "5c9056133d353d2b23a327ed4412451f0ccb37871570dfd697063f6bf7f686f8"
     },
     {
       "path": "bytecode_python312/markovjunior/procedural/__init__.pyc",
       "bytes": 687,
-      "sha256": "82bb98a6e842a01d73295a998a84cb351d841e8568c138ec00c27bdf4e1a6924"
+      "sha256": "d348ddf3b4526f0bcfdd493eed9952cf2dc62a290b131a603e6ec169bceba270"
     },
     {
       "path": "bytecode_python312/markovjunior/procedural/backends.pyc",
       "bytes": 14890,
-      "sha256": "89adc97cce59443a32f4143566f85425b0d31bb153d78cab605f845b48e7ef3b"
+      "sha256": "571709c1379215667ed143c1739ccfd15777e7456a0920f04aaf8ac86e466a50"
+    },
+    {
+      "path": "bytecode_python312/markovjunior/procedural/browser.pyc",
+      "bytes": 4261,
+      "sha256": "f4a374e7e4079dd19fedcd2e75cc116cf88038cd219248d1f3a8d450f138f949"
     },
     {
       "path": "bytecode_python312/markovjunior/procedural/cli.pyc",
       "bytes": 3244,
-      "sha256": "fb472413f6f975f89be88d3262d9a45289df3e82930497de36e09718b2d67dec"
+      "sha256": "378d4a3623c2eb0b248d77a3b5944135db8622b466d66edd44707b1d3f461ac3"
     },
     {
       "path": "bytecode_python312/markovjunior/procedural/generators.pyc",
       "bytes": 23109,
-      "sha256": "cdc84e7917f85939e64df8c98f020f1d5fd2e9397ac2a16b277e474f05e8cf2d"
+      "sha256": "50cf162850ee6b23bf9e0c50356434e5593dd7214cb8fb23d8097a6305d981ea"
     },
     {
       "path": "bytecode_python312/markovjunior/procedural/ir.pyc",
       "bytes": 19450,
-      "sha256": "05f7dc99412db3aac7ac13bdc534df33db70f4f3fa2091ac38e7346d1b48bef4"
+      "sha256": "0f8c8d929d02c3e1e9521014ec8519bba70e97a3e4bc48ae4c81b85e888bf0a1"
     },
     {
       "path": "bytecode_python312/markovjunior/procedural/model.pyc",
       "bytes": 1699,
-      "sha256": "1d083c14a801797c40e3ead9eef8d7636c66f7f9efe714e53314dbc750717b34"
+      "sha256": "4cfb2c2f85f26e1a7b2534fa421d5f95a6b65665340b69da3035cb3de47e4237"
     },
     {
       "path": "bytecode_python312/markovjunior/procedural/pipeline.pyc",
       "bytes": 8234,
-      "sha256": "3716be53344a92245953745cf64b84b8272ea258c097d8bc141a97559f335a67"
+      "sha256": "eb8a1f999e2512bd87c434005588e409c647f2259afbf2ec4285f381044ad0d3"
     },
     {
       "path": "bytecode_python312/markovjunior/procedural/registry.pyc",
       "bytes": 9883,
-      "sha256": "34c3cf4e9c13dd8ca1a106a150a2be72811a96aa7e0dbc7a46a1246b9d168e76"
+      "sha256": "2b6f6d7e57d6d3faf71e1e33b2b90edb5bb13271b7272ec67b7325d21caa5ed1"
     },
     {
       "path": "bytecode_python312/markovjunior/rules.pyc",
       "bytes": 30843,
-      "sha256": "9206bdd7d669b9dd825d00f18b567ecf28e3eb2ae9b1f968e314854ae02f4d09"
+      "sha256": "75346b9960b6c20f6997bf95c5774268b2f96370d6a5f557d95760117bdf9e7a"
     },
     {
       "path": "bytecode_python312/markovjunior/search.pyc",
       "bytes": 8175,
-      "sha256": "7fe58e9728928dd0a33e2650ae9fcea529379d5233ebe8b5cdc7b7173a0e32cf"
+      "sha256": "4e05a5077bbc85f9246ad54bf3d86cf41043d0684574dfb030092d7060936539"
     },
     {
       "path": "bytecode_python312/markovjunior/wfc.pyc",
       "bytes": 30148,
-      "sha256": "3a98e9d27eaf573546657861a993655c5d851c8d04c2e2a34e68a806a28148de"
+      "sha256": "e5f713e398f93fa642768da668bc2cc2a757750d8c0ace4d7073d2818c6f33a9"
     },
     {
       "path": "codigo_procedural_completo.txt",
@@ -167,9 +250,19 @@
       "sha256": "f3d9b7dbcc58ece91faf2188ca6f30eca17d5ce8c06359b7078504442effa8d6"
     },
     {
+      "path": "dist/markovjunior_procedural-1.0.0-py3-none-any.whl",
+      "bytes": 721817,
+      "sha256": "5f01e95f7409417cb386dfd52d031656d144efedb72f77ff1a0b2b84f92270b7"
+    },
+    {
       "path": "docs/app.js",
       "bytes": 10334,
       "sha256": "470f8f281957e9497bd5906663147dae7a8c63387b35500b5fd9e0998b158895"
+    },
+    {
+      "path": "docs/examples.json",
+      "bytes": 8535,
+      "sha256": "3f9f28bed8686df97cafcdf2afbfa005bd5d4de01508392ad1d958f9f3981c2d"
     },
     {
       "path": "docs/fallback.js",
@@ -177,14 +270,39 @@
       "sha256": "0335b24d1962ae93975597db06aae10508e3a7527465519ff73144ce929832ac"
     },
     {
+      "path": "docs/icon.svg",
+      "bytes": 191,
+      "sha256": "f5055b15246994c9c814409668e62d61817b9b559d535388f9b0d582079c4780"
+    },
+    {
       "path": "docs/index.html",
-      "bytes": 3632,
-      "sha256": "b7ee3c21d4adc16dae8152f4f043fe3d02b353105e886b375353323c73c029ee"
+      "bytes": 12482,
+      "sha256": "c24aaf84ab916d91debf1d04d6e67bc73cf2cd891c16cb54f2e75d6d92df7af3"
     },
     {
       "path": "docs/python-runtime.zip",
-      "bytes": 688913,
-      "sha256": "59e543fe1ced35b38883ec9fee9826fd2fa560354c94474c2292b5828d6af2cb"
+      "bytes": 696262,
+      "sha256": "17f9dead0b134cf234d7a66424a40a95b9d623d3d7e97573f639852c776e81ca"
+    },
+    {
+      "path": "docs/reference.html",
+      "bytes": 9839,
+      "sha256": "866076f31eeef6c85e244c95e57c596410f58359ffc3b903a5a983bd8ba12a8f"
+    },
+    {
+      "path": "docs/studio-worker.js",
+      "bytes": 1999,
+      "sha256": "15e6bb4245f0912ed328623863294316783ca5f00e5a64ee1b8e79600adfe6c3"
+    },
+    {
+      "path": "docs/studio.css",
+      "bytes": 19775,
+      "sha256": "edc997360fc3c51269832101861320e39b0e72657c66ad3e5c9fcb25750c94da"
+    },
+    {
+      "path": "docs/studio.js",
+      "bytes": 26215,
+      "sha256": "0e50ccf53ce3414db85976517a87df02c6e18a434afe0cbd4eaab04da19aac73"
     },
     {
       "path": "docs/style.css",
@@ -197,9 +315,24 @@
       "sha256": "9362ea9ea17cb221a20cbbd63f404710834cc273d2a9a7b60314fd68ab702cd6"
     },
     {
+      "path": "docs/vendor/CODEMIRROR-LICENSES.txt",
+      "bytes": 23038,
+      "sha256": "d973d6cee3a5297b5099af2ce9cbe6509a8fbd79d2323820f92e748b30035900"
+    },
+    {
       "path": "docs/vendor/babylon.js",
       "bytes": 8619713,
       "sha256": "ff331103574d58a94e68353087721260628a4a6dd5521aa98949127bde73bbff"
+    },
+    {
+      "path": "docs/vendor/editor.js",
+      "bytes": 465760,
+      "sha256": "c123b65b632b9cbcfa69e466c56e95b3d69e430e253ce25b81cf5c5e9c36014b"
+    },
+    {
+      "path": "docs/viewport.js",
+      "bytes": 18869,
+      "sha256": "0eab595c25c1517d4e926343639663c2b70fb3de86497789f3e2a70e9522c5f6"
     },
     {
       "path": "docs/worker.js",
@@ -212,6 +345,16 @@
       "sha256": "1ff26237e1047bd26294ad31b5d4c8b28b83d371f3ce3aa8adaeb9b1acd28690"
     },
     {
+      "path": "downloads/Markov_Studio_1.0.zip",
+      "bytes": 26058422,
+      "sha256": "5621ca56857d39dba09fb6e19c5ae19ac0a3e480eb974a6905b12771504595a8"
+    },
+    {
+      "path": "downloads/codigo_markov_1_0.txt",
+      "bytes": 11912147,
+      "sha256": "3c44e4436f7c27198a2e16a8c5b2b664e6fa4678c7a475245afed5f179e2b095"
+    },
+    {
       "path": "downloads/codigo_procedural_completo.txt",
       "bytes": 2523093,
       "sha256": "2c120f73d538731a085f96ccf9456c2ad144f9da647e4bde2e64c4dd29d360a6"
@@ -220,6 +363,11 @@
       "path": "downloads/markovjunior_procedural-0.2.0-py3-none-any.whl",
       "bytes": 714395,
       "sha256": "f3d9b7dbcc58ece91faf2188ca6f30eca17d5ce8c06359b7078504442effa8d6"
+    },
+    {
+      "path": "downloads/markovjunior_procedural-1.0.0-py3-none-any.whl",
+      "bytes": 721817,
+      "sha256": "5f01e95f7409417cb386dfd52d031656d144efedb72f77ff1a0b2b84f92270b7"
     },
     {
       "path": "downloads/playground_sem_webgl.png",
@@ -235,6 +383,61 @@
       "path": "downloads/relatorio_linguagens.json",
       "bytes": 1747,
       "sha256": "7c066c3f473db641e80222a9e6b9dbdbf60dd6a8679ff3eccca2d8e8da849ef1"
+    },
+    {
+      "path": "downloads/studio_1_0_cpu.png",
+      "bytes": 267271,
+      "sha256": "093f3f511b39530637fbc1ed05ed6784ffcd16c5369ae5a552d2cf5cd5482050"
+    },
+    {
+      "path": "downloads/studio_1_0_webgl.png",
+      "bytes": 232269,
+      "sha256": "896afca4b4c54819822eeadd0e35be9d9f6c68f720e852832eaf39733c8b45b7"
+    },
+    {
+      "path": "examples/language/algorithm/main.mp",
+      "bytes": 787,
+      "sha256": "ed727505437e1e781103109e7a3b3e694d33fa55b6e2a6cee034fb1780ad37ad"
+    },
+    {
+      "path": "examples/language/architecture/main.mp",
+      "bytes": 853,
+      "sha256": "20c33bde4f7649d0292a8e8d17fd003e938f57f73a1065045d89270eb84353a3"
+    },
+    {
+      "path": "examples/language/backends/main.mp",
+      "bytes": 413,
+      "sha256": "840a43abe547f1c83616bbdf4767788e254dab4a3b916bb8c00a392ddad6978d"
+    },
+    {
+      "path": "examples/language/catalog.json",
+      "bytes": 1296,
+      "sha256": "0cfb538a89bfba454418b11e956385f72b5feb4743572c715c7adf523e17ee3f"
+    },
+    {
+      "path": "examples/language/game/main.mp",
+      "bytes": 635,
+      "sha256": "7a49267bacd5b0bdf3b4446caeb4cf0437bbd8d8ffdf9896f0d8505ccdbb6e5f"
+    },
+    {
+      "path": "examples/language/grammar/main.mp",
+      "bytes": 571,
+      "sha256": "f70736516ae8dbe449d2a1c94e7bfa5d2a709db00dd3dbd4691364fb07f8ef40"
+    },
+    {
+      "path": "examples/language/orbits/main.mp",
+      "bytes": 1203,
+      "sha256": "624402cd1f74562d1da7793dc6f53cbbf6e6a327e4e29812e6b8e984b2161ae7"
+    },
+    {
+      "path": "examples/language/orbits/shapes.mp",
+      "bytes": 613,
+      "sha256": "f0241131a516244886ec01f235b3e11934d36f07ea158df16a0448451a8eaf83"
+    },
+    {
+      "path": "examples/language/terrain/main.mp",
+      "bytes": 872,
+      "sha256": "244da8d721f01f594b40cafb41150586fc109b17a193a3b481fa15f647cd7cfc"
     },
     {
       "path": "examples/procedural/extension.py",
@@ -493,8 +696,8 @@
     },
     {
       "path": "markovjunior/__main__.py",
-      "bytes": 29,
-      "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      "bytes": 47,
+      "sha256": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4"
     },
     {
       "path": "markovjunior/assets/LICENSE",
@@ -2563,8 +2766,8 @@
     },
     {
       "path": "markovjunior/cli.py",
-      "bytes": 3948,
-      "sha256": "f0a4dbf56ee0af137326be2b6f8d763b540b4c3e78f76159dc21f71982a54a2e"
+      "bytes": 4073,
+      "sha256": "dc23428177a9d178dc8e7e3913de7ce3aa4dc80968ba8caf59b82a26d5d39533"
     },
     {
       "path": "markovjunior/core.py",
@@ -2580,6 +2783,11 @@
       "path": "markovjunior/gui.py",
       "bytes": 8675,
       "sha256": "ac9bf8242acca2643e12c1f47915aa6649af9a5fc5ba894c2c28d75c8fdc76cb"
+    },
+    {
+      "path": "markovjunior/language.py",
+      "bytes": 24570,
+      "sha256": "3ec514e2673d95704dbf8380a7cc90c07fad38767469f9f92f1a572ee4afb2fd"
     },
     {
       "path": "markovjunior/operations.py",
@@ -5848,8 +6056,8 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 674,
-      "sha256": "70a599f0cfe27d3eaedf2c53b5c66c3eb05763512b2e325aacf4797f6ee86bd1"
+      "bytes": 706,
+      "sha256": "7e97205e74ee18b9eff19ac0329cabbeb6432507b36c528237add99ec12ea85b"
     },
     {
       "path": "requirements-preview.txt",
@@ -7128,8 +7336,13 @@
     },
     {
       "path": "scripts/build_browser_runtime.py",
-      "bytes": 571,
-      "sha256": "74bd5c4b4e7069ff8559164e792458fc5994f3e9532c3b52bfe316c439b4fa69"
+      "bytes": 978,
+      "sha256": "c707528075e983ada91ba0ec3fbe312189acb3ef1da87e56c1e0703876c1bc3c"
+    },
+    {
+      "path": "scripts/package_release.py",
+      "bytes": 2674,
+      "sha256": "d6e3263e423b57564bc1bbc961496d0130c5f6f931775b124b2e3a16b1cd9029"
     },
     {
       "path": "scripts/refresh_release_manifest.py",
@@ -7140,6 +7353,11 @@
       "path": "tests/test_browser.py",
       "bytes": 1310,
       "sha256": "de058a65aaaeeb2cc3f0145b1ca04f0752a31cd4d9b2151263a857cf99137517"
+    },
+    {
+      "path": "tests/test_language.py",
+      "bytes": 8147,
+      "sha256": "585ced98eaaa0fe2a69c5a24749a684ea928fc0d40762ce017d04ca24344fe61"
     },
     {
       "path": "tests/test_procedural.py",
@@ -13282,14 +13500,39 @@
       "sha256": "2c8f52d993e840a37955e33f807ef41487e7bc4c4e8ab07c1527b822a102e581"
     },
     {
+      "path": "validation/studio_report.json",
+      "bytes": 2585,
+      "sha256": "699cb73f5890208dd1cc40108742a2093e88d8bb1a7a3f1386b0ab732e431ddc"
+    },
+    {
       "path": "validation/test_rng.py",
       "bytes": 686,
       "sha256": "9770b327857eed37dfd3c38ab10dfc587ca71031969b0e8972ee9a3a92dd1519"
     },
     {
+      "path": "validation/test_studio.cjs",
+      "bytes": 7797,
+      "sha256": "48a4d5d644ddbb9ee3d6ff3eabb675231ecf50ecbbf698c9b8240fab41387cc3"
+    },
+    {
       "path": "validation/validate_backends.py",
       "bytes": 7562,
       "sha256": "03cc3cca70c97a36410e67453132a6c6f6942e53b2675a7531ff32ed948196ca"
+    },
+    {
+      "path": "web/editor.js",
+      "bytes": 3911,
+      "sha256": "d3bcec8b383064b6b785966a526bffdf73dd63d92b177d977fe42d90e76da0c3"
+    },
+    {
+      "path": "web/package-lock.json",
+      "bytes": 21465,
+      "sha256": "571bfd0e1758aa254afacb0edb1c372cc5755112e27b8db8ed2b92b60c1e2226"
+    },
+    {
+      "path": "web/package.json",
+      "bytes": 365,
+      "sha256": "ac6314cd03d7c0d94f3717568f24aa0b86d72d99b11e15f5c032d989df1c2557"
     }
   ]
 }

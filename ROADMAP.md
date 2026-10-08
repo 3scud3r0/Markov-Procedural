@@ -1,52 +1,34 @@
-# Especificação de evolução — proposta
+# Evolução e estado real
 
-Não existia uma especificação para 0.5 a 1.0 na entrega 0.2.0. Este documento é uma **proposta de escopo**, sem datas ou garantia de implementação. Os números abaixo são marcos futuros, não funcionalidades já disponíveis.
+## 1.0 — linguagem procedural executável e Studio
 
-## Disponível hoje
+Disponível: sintaxe e semântica compatíveis com Python; programas escritos pelo usuário; funções, classes, recursão, estruturas de dados e módulos; regras procedurais, RNG, ruído, geometria e malhas; parâmetros declarados no código; console, arquivos e diagnósticos com linha; callbacks de animação e teclado; execução isolada em Worker; parada e recuperação; editor, inspector e projetos persistidos/exportáveis; visualização WebGL e CPU.
 
-- Motor Python, nove exportadores de funções numéricas, gramáticas, dados e SVG.
-- Playground estático com Python real via Pyodide em Web Worker e cenas editáveis no Babylon.js.
-- Gerador de jardim 3D, controle de semente, seleção, movimento, rotação, escala e remoção de objetos.
-- Exportação/importação das edições em JSON; exportação individual dos códigos e SVGs gerados.
-- Renderização alternativa Canvas 2D na CPU, com projeção da cena 3D e edição sem WebGL; visual simplificado em relação ao Babylon.js.
-- Compiladores C/C++/Rust não são executados no playground. O Python gera os fontes.
+O contrato está em [LANGUAGE_SPEC.md](LANGUAGE_SPEC.md). Os testes de aceite executam programas novos no editor, incluindo modos com WebGL desativado. **1.0 identifica esse contrato de linguagem e ambiente**, não o cumprimento automático de todas as ideias sugeridas anteriormente.
 
-## 0.5 — Representação de cenas e editor
+## O que aconteceu com a proposta 0.5–1.0
 
-Proposto: unificar o esquema de cenas 2D/3D, grupos, hierarquia, materiais e transformações; acrescentar desfazer/refazer e salvar projetos completos.
+A entrega 0.2.0 não continha uma especificação prévia dessas versões. Um roadmap foi proposto depois, com ideias para editor, gramáticas, IR, mundos e extensões. Esses números eram marcos propostos; as versões intermediárias não foram lançadas.
 
-Aceite: exportar e reimportar um projeto preserva cena, receita e edições; mesmos parâmetros e semente produzem o mesmo documento; testes de migração de esquemas e de histórico passam.
+| Ideia anterior | Estado nesta entrega |
+| --- | --- |
+| Cenas 2D/3D, transformações e projetos | Cena 3D versionada e Studio; geradores SVG existentes; projetos completos. Não há um esquema único que converta todo SVG em 3D. |
+| Desfazer/refazer | Histórico do editor de código. Histórico de transformações da cena ainda futuro. |
+| Linguagem programável, funções e strings | Executadas em Python/Markov. |
+| Editor genérico de parsers/ASTs e interpretador Garden | Futuro. A biblioteca de gramáticas e o exportador Garden continuam existentes. |
+| Ampliar todos os nove backends com strings, arrays e chamadas | Futuro. Os backends continuam com a IR numérica validada. |
+| Terreno, arquitetura e composição | Programáveis por funções e malhas, com exemplos executáveis. Catálogo completo de biomas e redes ainda futuro. |
+| glTF | Futuro. A exportação atual é JSON de cena e PNG. |
+| Parar execução e limites | Implementados no Worker e no runtime. |
+| Offline completo, plugins remotos e colaboração | Futuros. Há módulos locais, geradores extensíveis, armazenamento local e links de projeto. |
 
-## 0.6 — Linguagens e gramáticas
+## Próximas extensões
 
-Proposto: ferramentas para definir tokens, gramáticas, parsers e ASTs; mensagens de erro com linha/coluna; interpretador executável da linguagem Garden.
+1. Histórico de transformações e hierarquia de cenas.
+2. Exportação glTF e materiais mais ricos.
+3. Pacotes e dependências de projetos, com matriz de suporte por runtime.
+4. Novos nós tipados e capacidades dos exportadores existentes.
+5. Ferramentas de parser/AST e linguagem Garden executável.
+6. Cache offline, cancelamento mais granular e benchmarks por dispositivo.
 
-Aceite: uma linguagem criada pelo usuário consegue gerar, analisar e executar um programa de exemplo; entradas inválidas têm diagnóstico preciso; gramáticas recursivas respeitam limites.
-
-## 0.7 — Representação de programas mais ampla
-
-Proposto: ampliar a IR com tipos, strings, arrays e funções chamadas por outras funções; definir capacidades por backend; ampliar geração de programas em C, C++, Rust e demais destinos.
-
-Aceite: cada backend anuncia os nós suportados e rejeita os demais antes da exportação; baterias de equivalência incluem os novos tipos e chamadas, com regras de memória/overflow documentadas.
-
-## 0.8 — Mundos procedurais
-
-Proposto: terreno, biomas, arquitetura, redes e grafos; composição de geradores; níveis de detalhe e exportação glTF.
-
-Aceite: um projeto combina pelo menos três geradores; exportação glTF abre em outro visualizador; documentação registra orçamento de geometria e métricas nos dispositivos de referência.
-
-## 0.9 — Extensões e desempenho
-
-Proposto: API versionada de extensões, catálogo de exemplos, cancelamento de geração, limites de execução e cache/offline do playground.
-
-Aceite: extensões demonstrativas funcionam nas APIs documentadas; tarefas longas podem ser canceladas; o modo offline funciona após baixar os pacotes e mostra quais recursos estão disponíveis.
-
-## 1.0 — Contratos estáveis
-
-Proposto: estabilizar formato de projeto, IR, esquema de cenas e API pública; publicar política de compatibilidade, migrações, instalação e matriz de suporte.
-
-Aceite: testes de equivalência, round-trip e integração passam na matriz publicada; exemplos executam a partir de instalação limpa; limitações dos backends e do navegador são explícitas. Recursos experimentais ficam identificados.
-
-## Limites e decisões ainda abertas
-
-A execução nativa de C/C++/Rust exige infraestrutura adicional ou toolchains WebAssembly; GitHub Pages não oferece compiladores de servidor. Bibliotecas específicas de linguagens, múltiplos usuários, persistência remota e colaboração exigem especificações próprias. Nenhum desses recursos está prometido como pronto nesta versão.
+Cada extensão exige contrato, exemplo executável e validação antes de aparecer como disponível no Studio. Não há datas prometidas.

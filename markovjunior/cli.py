@@ -11,6 +11,9 @@ from .graphics import render,save_bitmap,save_vox
 
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0] == "run":
+        from .language import main as language_main
+        return language_main(argv[1:])
     if argv and argv[0] == "generate":
         from .procedural.cli import main as procedural_main
         return procedural_main(argv[1:])

@@ -1,30 +1,66 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Markov Procedural · Python + Babylon.js</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="vendor/babylon.js"></script>
-  <script defer src="fallback.js"></script>
-  <script defer src="app.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Markov 1.0: programe, execute e explore algoritmos, regras e mundos procedurais com Python no navegador.">
+<title>Markov 1.0 — Procedural Studio</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="studio.css?v=1.0.0">
+<script defer src="vendor/editor.js?v=1.0.0"></script>
+<script defer src="vendor/babylon.js?v=1.0.0"></script>
+<script defer src="viewport.js?v=1.0.0"></script>
+<script defer src="studio.js?v=1.0.0"></script>
 </head>
 <body>
-<header><div><span class="eyebrow">LABORATÓRIO PROCEDURAL</span><h1>Markov <em>Procedural</em></h1></div><nav><a href="https://github.com/3scud3r0/Markov-Procedural">Código & downloads ↗</a><a href="https://github.com/3scud3r0/Markov-Procedural/blob/main/ROADMAP.md">Roadmap 0.5–1.0 ↗</a></nav></header>
-<main>
-  <aside>
-    <h2>Crie pelas regras.</h2><p class="intro">Python gera. Babylon.js dá forma. Explore uma semente, mova os objetos e transforme a cena.</p>
-    <label for="preset">Experimento</label><select id="preset"><option value="garden">Jardim 3D + nove linguagens</option><option value="maze">Labirinto SVG</option><option value="svg">Jardim vetorial SVG</option><option value="grammar">Uma linguagem própria</option></select>
-    <div class="controls"><div><label for="seed">Semente</label><input id="seed" type="number" value="42" min="-2147483648" max="2147483647"></div><div><label for="trees">Árvores</label><input id="trees" type="number" min="1" max="30" value="9"></div><div><label for="depth">Profundidade</label><input id="depth" type="number" min="1" max="5" value="3"></div></div>
-    <button id="generate" disabled>Carregando Python…</button>
-    <details><summary>Editar receita JSON</summary><textarea id="recipe" spellcheck="false" aria-label="Receita JSON"></textarea><button id="run-recipe" disabled>Executar receita editada</button></details>
-    <p id="status" role="status" aria-live="polite">Preparando Pyodide no navegador…</p>
-    <p class="hint">O primeiro carregamento baixa o Python e seus pacotes. A geração roda neste navegador, sem servidor Python.</p>
-  </aside>
-  <section class="workspace">
-    <div class="toolbar"><div class="tabs"><button id="tab-scene" class="active">Cena 3D</button><button id="tab-files">Arquivos gerados</button></div><select id="renderer" aria-label="Renderizador"><option value="auto">Automático · WebGL / Canvas</option><option value="canvas">Canvas 2D · sem WebGL</option></select><span id="stats">Preparando cena</span></div>
-    <div id="scene-panel"><canvas id="render" aria-label="Cena 3D interativa"></canvas><div class="canvas-note">Arraste para orbitar · roda para zoom · clique para selecionar</div><div class="scene-actions"><select id="transform" aria-label="Transformação"><option value="move">Mover</option><option value="rotate">Girar</option><option value="scale">Escalar</option><option value="none">Sem gizmo</option></select><button id="reset-camera">Câmera inicial</button><button id="delete-object">Excluir seleção</button><button id="export-scene">Exportar edição JSON</button><label class="file-button">Importar edição<input type="file" id="import-scene" accept=".json,application/json"></label></div></div>
-    <div id="files-panel" hidden><div class="file-toolbar"><select id="file-list" aria-label="Arquivo gerado"></select><button id="download-file">Baixar arquivo</button></div><pre id="source"></pre><iframe id="svg-preview" title="Prévia SVG" sandbox hidden></iframe></div>
-  </section>
+<svg class="svg-definitions" aria-hidden="true"><defs>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z"/></symbol>
+<symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8zM14 3v6h5M8 13h8M8 17h6"/></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h7l2 3h9v11H3z"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M3 4h7l2 2 2-2h7v16h-7l-2 2-2-2H3zM12 6v16"/></symbol>
+<symbol id="i-save" viewBox="0 0 24 24"><path d="M4 3h13l4 4v14H3V3zM7 3v6h10V3M7 21v-8h10v8"/></symbol>
+<symbol id="i-share" viewBox="0 0 24 24"><path d="m8 12 8-6M8 12l8 6"/><circle cx="5" cy="12" r="3"/><circle cx="19" cy="4" r="3"/><circle cx="19" cy="20" r="3"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><path d="m7 5-6 7 6 7m10-14 6 7-6 7M14 3l-4 18"/></symbol>
+<symbol id="i-move" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20m-14-6 4-4 4 4M8 18l4 4 4-4M6 8l-4 4 4 4m12-8 4 4-4 4"/></symbol>
+<symbol id="i-rotate" viewBox="0 0 24 24"><path d="M20 7v5h-5M20 12a8 8 0 1 0-2 6"/></symbol>
+<symbol id="i-scale" viewBox="0 0 24 24"><path d="M4 14v6h6M14 4h6v6M4 20l16-16"/></symbol>
+<symbol id="i-pointer" viewBox="0 0 24 24"><path d="m4 3 15 9-7 2-3 7z"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 4v6h6M4 10a8 8 0 1 1 2 8"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 2v14m-5-5 5 5 5-5M3 17v5h18v-5"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m8 4 8 8-8 8"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+</defs></svg>
+<header class="app-header">
+<a class="brand" href="./" aria-label="Markov Studio"><svg class="brand-mark" viewBox="0 0 32 32"><path d="M3 25V7h6l7 10 7-10h6v18h-6V16l-7 10-7-10v9z"/></svg><span>markov<span class="brand-divider">/</span><span class="brand-studio">studio</span></span><span class="version">1.0</span></a>
+<nav class="primary-nav" aria-label="Navegação"><button id="open-examples"><svg><use href="#i-grid"/></svg>Exemplos</button><a href="reference.html" target="_blank" rel="noopener"><svg><use href="#i-book"/></svg>Referência</a><a href="https://github.com/3scud3r0/Markov-Procedural" target="_blank" rel="noopener">GitHub ↗</a></nav>
+<div class="header-actions"><button id="open-project" class="quiet-button"><svg><use href="#i-folder"/></svg>Abrir</button><button id="save-project" class="quiet-button"><svg><use href="#i-save"/></svg>Salvar projeto</button><button id="share-project" class="icon-button" aria-label="Compartilhar projeto" title="Compartilhar código por link"><svg><use href="#i-share"/></svg></button></div>
+</header>
+<div class="project-toolbar"><div class="project-identity"><span class="breadcrumb">WORKSPACE</span><span class="breadcrumb-slash">/</span><input id="project-name" aria-label="Nome do projeto" value="Órbitas de matéria"><span id="saved-state">Salvo neste navegador</span></div><div class="execution-controls"><label class="seed-control">seed <input id="seed" type="number" min="-2147483648" max="2147483647" value="42" aria-label="Semente do projeto"></label><button id="stop" disabled title="Interromper e reiniciar o worker"><svg><use href="#i-stop"/></svg>Parar</button><button id="run" class="run-button" disabled><svg><use href="#i-play"/></svg><span>Iniciando Python</span><kbd>⌘ ↵</kbd></button></div></div>
+<main class="studio-layout">
+<aside class="project-sidebar">
+<div class="section-heading">EXPLORADOR<button id="new-file" class="icon-button" title="Novo arquivo" aria-label="Novo arquivo"><svg><use href="#i-plus"/></svg></button></div>
+<div class="project-root"><svg><use href="#i-chevron"/></svg><svg><use href="#i-folder"/></svg><span id="folder-name">orbits</span></div><div id="file-tree" class="file-tree"></div>
+<div class="sidebar-actions"><button id="new-project"><svg><use href="#i-plus"/></svg>Projeto em branco</button><button id="recent-projects"><svg><use href="#i-reset"/></svg>Projetos recentes</button></div>
+<div class="sidebar-section"><div class="section-heading">A LINGUAGEM</div><p>Código real.<br>Possibilidades procedurais.</p><span>Python + regras, geometria,<br>ruído e animação.</span><a href="reference.html#language" target="_blank">Conheça a sintaxe <span>↗</span></a></div>
+<div class="runtime-card"><div><span class="status-dot" id="runtime-dot"></span><strong id="runtime-label">Carregando runtime</strong></div><p id="runtime-detail">Python via Pyodide<br>Execução em Web Worker</p><div class="runtime-track"><i id="runtime-progress"></i></div></div>
+</aside>
+<section class="editor-panel" aria-label="Editor de código"><div class="panel-heading"><div class="editor-tab"><svg><use href="#i-code"/></svg><span id="active-file">main.mp</span><span class="tab-dot" id="dirty-indicator"></span></div><select id="mobile-file-select" aria-label="Arquivo de código"></select><button id="mobile-new-file" class="icon-button" title="Novo arquivo" aria-label="Criar arquivo"><svg><use href="#i-plus"/></svg></button><button id="download-source" class="icon-button" title="Baixar arquivo de código" aria-label="Baixar arquivo de código"><svg><use href="#i-download"/></svg></button></div><div id="editor" class="code-editor"></div><div class="editor-status"><span id="cursor-position">Ln 1, Col 1</span><span>UTF-8 <b>Markov / Python</b></span></div></section>
+<section class="output-workspace">
+<div class="panel-heading output-heading"><div class="output-tabs"><button class="active" data-output="viewport"><svg><use href="#i-eye"/></svg>Visualização</button><button data-output="files"><svg><use href="#i-file"/></svg>Saídas <span id="output-count">0</span></button></div><select id="renderer" aria-label="Renderizador"><option value="auto">Automático</option><option value="cpu">CPU · sem WebGL</option></select></div>
+<div id="viewport-panel" class="viewport-panel"><div class="viewport-meta"><span class="live-badge"><i></i><span id="preview-label">LIVE PREVIEW</span></span><span id="scene-stats">0 objetos</span></div><div id="viewport" class="viewport-canvas"></div><div id="empty-scene" class="empty-scene" hidden><svg><use href="#i-code"/></svg><h3>O resultado também pode ser código.</h3><p>Veja o console e os arquivos na aba Saídas.<br>Seu programa não precisa criar uma cena.</p></div><div class="viewport-tools"><div class="transform-tools"><button class="active" data-transform="none" title="Selecionar" aria-label="Selecionar"><svg><use href="#i-pointer"/></svg></button><button data-transform="move" title="Mover" aria-label="Mover"><svg><use href="#i-move"/></svg></button><button data-transform="rotate" title="Girar" aria-label="Girar"><svg><use href="#i-rotate"/></svg></button><button data-transform="scale" title="Escalar" aria-label="Escalar"><svg><use href="#i-scale"/></svg></button></div><span>Arraste para orbitar · role para zoom</span><button id="reset-camera" class="icon-button" title="Restaurar câmera" aria-label="Restaurar câmera"><svg><use href="#i-reset"/></svg></button><button id="snapshot" class="icon-button" title="Salvar imagem PNG" aria-label="Salvar imagem PNG"><svg><use href="#i-download"/></svg></button></div></div>
+<div id="files-panel" class="files-panel" hidden><div class="file-output-bar"><select id="output-file" aria-label="Arquivo de saída"></select><button id="download-output"><svg><use href="#i-download"/></svg>Baixar</button></div><pre id="output-source"></pre><iframe id="svg-preview" title="Prévia SVG" sandbox hidden></iframe><p id="no-files">Use <code>emit("arquivo.json", dados)</code> para criar um arquivo de saída.</p></div>
+<div class="console-panel"><div class="console-heading"><div><span class="console-symbol">›_</span><strong>Console</strong><span id="console-badge">Python</span></div><button id="clear-console">Limpar</button></div><div id="console" class="console-content" role="log" aria-live="polite"><div class="console-welcome">Markov 1.0 — escreva um programa. Execute. Explore.</div></div></div>
+</section>
+<aside class="inspector"><div class="panel-heading"><strong>INSPECTOR</strong></div><section class="inspector-section"><div class="inspector-title"><span class="number-mark">01</span><h2>Parâmetros</h2></div><p class="inspector-intro">Controles declarados no seu código com <code>param()</code>.</p><div id="parameters"><p class="inspector-empty">Execute o programa para descobrir seus parâmetros.</p></div></section><section class="inspector-section"><div class="inspector-title"><span class="number-mark">02</span><h2>Objeto selecionado</h2></div><div id="object-inspector"><p class="inspector-empty">Clique em um objeto na cena para inspecionar e editar.</p></div></section><section class="inspector-section"><div class="inspector-title"><span class="number-mark">03</span><h2>Projeto</h2></div><dl class="project-metrics"><div><dt>Runtime</dt><dd>Python / Pyodide</dd></div><div><dt>Renderizador</dt><dd id="renderer-label">Inicializando</dd></div><div><dt>Execução</dt><dd id="elapsed">—</dd></div><div><dt>Regras</dt><dd id="rules-count">0</dd></div></dl><button id="animation" disabled class="animation-button">▶ Iniciar animação</button><div class="inspector-secondary"><button id="export-scene">Exportar cena</button><button id="clear-edits">Limpar edições</button></div></section></aside>
 </main>
-<footer><span>Determinístico por semente. Aberto por extensão.</span><span>Python / Pyodide + Babylon.js · <a href="https://github.com/mxgmn/MarkovJunior">Base MarkovJunior / MIT</a></span></footer>
+<footer class="statusbar"><div><span class="status-dot" id="execution-dot"></span><span id="status" role="status">Iniciando Python no navegador…</span></div><div><span>Markov 1.0.0</span><span class="footer-divider">/</span><span>Ctrl + Enter para executar</span></div></footer>
+<input type="file" id="project-input" accept=".json,.mp,.py" hidden>
+<dialog id="examples-dialog"><div class="dialog-heading"><div><span class="eyebrow">APRENDA EXECUTANDO</span><h2>Um ponto de partida.<br>O resto é seu código.</h2></div><button data-close="examples-dialog" class="icon-button" aria-label="Fechar exemplos"><svg><use href="#i-close"/></svg></button></div><div id="examples-grid" class="examples-grid"></div><p class="dialog-note">Os exemplos são programas completos e editáveis. Ao abrir outro, seu projeto atual fica em Projetos recentes.</p></dialog>
+<dialog id="file-dialog"><div class="dialog-heading compact"><h2>Novo arquivo</h2><button data-close="file-dialog" class="icon-button" aria-label="Fechar"><svg><use href="#i-close"/></svg></button></div><label for="file-name">Nome do arquivo</label><input id="file-name" value="helpers.mp"><p>Importe com <code>from helpers import minha_funcao</code>.</p><button id="create-file" class="run-button">Criar arquivo</button><p id="file-error" role="alert"></p></dialog>
+<dialog id="recent-dialog"><div class="dialog-heading compact"><h2>Projetos recentes</h2><button data-close="recent-dialog" class="icon-button" aria-label="Fechar"><svg><use href="#i-close"/></svg></button></div><div id="recent-list"></div></dialog>
+<dialog id="share-dialog"><div class="dialog-heading compact"><h2>Compartilhar código</h2><button data-close="share-dialog" class="icon-button" aria-label="Fechar"><svg><use href="#i-close"/></svg></button></div><p>O link contém seu código e parâmetros. Quem abrir verá o programa e poderá executá-lo.</p><textarea id="share-link" readonly aria-label="Link para compartilhar"></textarea><button id="copy-link" class="run-button">Copiar link</button></dialog>
+<div id="toast" role="status" hidden></div>
 </body></html>
