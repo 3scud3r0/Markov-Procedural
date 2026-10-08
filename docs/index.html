@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Markov Procedural · Python + Babylon.js</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="vendor/babylon.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<header><div><span class="eyebrow">LABORATÓRIO PROCEDURAL</span><h1>Markov <em>Procedural</em></h1></div><nav><a href="https://github.com/3scud3r0/Markov-Procedural">Código & downloads ↗</a><a href="https://github.com/3scud3r0/Markov-Procedural/blob/main/ROADMAP.md">Roadmap 0.5–1.0 ↗</a></nav></header>
+<main>
+  <aside>
+    <h2>Crie pelas regras.</h2><p class="intro">Python gera. Babylon.js dá forma. Explore uma semente, mova os objetos e transforme a cena.</p>
+    <label for="preset">Experimento</label><select id="preset"><option value="garden">Jardim 3D + nove linguagens</option><option value="maze">Labirinto SVG</option><option value="svg">Jardim vetorial SVG</option><option value="grammar">Uma linguagem própria</option></select>
+    <div class="controls"><div><label for="seed">Semente</label><input id="seed" type="number" value="42" min="-2147483648" max="2147483647"></div><div><label for="trees">Árvores</label><input id="trees" type="number" min="1" max="30" value="9"></div><div><label for="depth">Profundidade</label><input id="depth" type="number" min="1" max="5" value="3"></div></div>
+    <button id="generate" disabled>Carregando Python…</button>
+    <details><summary>Editar receita JSON</summary><textarea id="recipe" spellcheck="false" aria-label="Receita JSON"></textarea><button id="run-recipe" disabled>Executar receita editada</button></details>
+    <p id="status" role="status" aria-live="polite">Preparando Pyodide no navegador…</p>
+    <p class="hint">O primeiro carregamento baixa o Python e seus pacotes. A geração roda neste navegador, sem servidor Python.</p>
+  </aside>
+  <section class="workspace">
+    <div class="toolbar"><div class="tabs"><button id="tab-scene" class="active">Cena 3D</button><button id="tab-files">Arquivos gerados</button></div><span id="stats">Babylon.js · WebGL</span></div>
+    <div id="scene-panel"><canvas id="render" aria-label="Cena 3D interativa"></canvas><div class="canvas-note">Arraste para orbitar · roda para zoom · clique para selecionar</div><div class="scene-actions"><select id="transform" aria-label="Transformação"><option value="move">Mover</option><option value="rotate">Girar</option><option value="scale">Escalar</option><option value="none">Sem gizmo</option></select><button id="reset-camera">Câmera inicial</button><button id="delete-object">Excluir seleção</button><button id="export-scene">Exportar edição JSON</button><label class="file-button">Importar edição<input type="file" id="import-scene" accept=".json,application/json"></label></div></div>
+    <div id="files-panel" hidden><div class="file-toolbar"><select id="file-list" aria-label="Arquivo gerado"></select><button id="download-file">Baixar arquivo</button></div><pre id="source"></pre><iframe id="svg-preview" title="Prévia SVG" sandbox hidden></iframe></div>
+  </section>
+</main>
+<footer><span>Determinístico por semente. Aberto por extensão.</span><span>Python / Pyodide + Babylon.js · <a href="https://github.com/mxgmn/MarkovJunior">Base MarkovJunior / MIT</a></span></footer>
+</body></html>

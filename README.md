@@ -11,6 +11,14 @@ A versão Python evoluiu para uma base extensível que gera **programas em vári
 
 ## Começar
 
+### Playground no navegador
+
+A interface [Babylon.js + Pyodide](https://3scud3r0.github.io/Markov-Procedural/) fica em `docs/`. O Python real roda em um Web Worker: gera jardim 3D, SVG, gramáticas e os nove formatos de código. Selecione objetos para mover, girar, escalar ou excluir; exporte/importa as edições em JSON. O modo de arquivos permite baixar o conteúdo gerado. Não executa compiladores C/C++/Rust.
+
+Para testar localmente, execute `python -m http.server 8000 --directory docs` e abra `http://localhost:8000`. O primeiro carregamento usa internet para baixar Pyodide 0.27.7 e Pillow; Babylon.js 9.30.0 está incluído localmente. Depois de alterar os fontes Python, execute `python scripts/build_browser_runtime.py`.
+
+A publicação está definida em `.github/workflows/pages.yml`. Em **Settings → Pages → Build and deployment**, selecione **GitHub Actions**. Para publicar sem workflow, use **Deploy from a branch → main → /docs**. A proposta de especificação das versões 0.5 a 1.0 está em [ROADMAP.md](ROADMAP.md), com critérios de aceite e recursos ainda não implementados.
+
 Requer Python 3.10+. Na pasta extraída:
 
 ```bash
